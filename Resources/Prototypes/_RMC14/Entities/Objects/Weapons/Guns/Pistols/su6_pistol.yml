@@ -1,5 +1,5 @@
 - type: entity
-  parent: CMWeaponPistolBase
+  parent: [BaseC2Contraband, CMWeaponPistolBase]
   id: RMCWeaponPistolSU6
   name: SU-6 smart pistol
   description: The SU-6 Smartpistol is an IFF-based sidearm currently undergoing field testing in the UNMC. Uses modified .45 ACP IFF bullets. Capable of firing in bursts.
@@ -19,9 +19,10 @@
         Blunt: 8
   - type: Gun
     shotsPerBurst: 3
-    selectedMode: SemiAuto
+    selectedMode: FullAuto
     availableModes:
     - SemiAuto
+    - FullAuto
     - Burst
     soundGunshot:
       path: /Audio/_RMC14/Weapons/Guns/Gunshots/su6_shoot.ogg
@@ -109,7 +110,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 30
+        Piercing: 18
 
 - type: Tag
   id: RMCMagazinePistolSU6

@@ -1,5 +1,5 @@
 - type: entity
-  parent: CMBaseWeaponRifle
+  parent: [BaseC2ExpeditionContraband, CMBaseWeaponRifle]
   name: AR10 Assault Rifle
   id: WeaponRifleAR10
   description: An earlier version of the more widespread M16 rifle. Considered to be the father of the 20th century rifle. How one of these ended up here is a mystery of its own. It is chambered in 7.62x51mm.
@@ -18,7 +18,12 @@
   - type: Clothing
     sprite: _RMC14/Objects/Weapons/Guns/Rifles/ar10.rsi
   - type: Gun
-    shotsPerBurst: 3
+    shotsPerBurst: 4
+    minAngle: 1
+    maxAngle: 10
+    angleIncrease: 1
+    angleDecay: 1
+    fireRate: 8
     selectedMode: SemiAuto
     availableModes:
     - SemiAuto
@@ -110,7 +115,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 40
+        Piercing: 22
 
 - type: Tag
   id: RMCMagazineRifleAR10

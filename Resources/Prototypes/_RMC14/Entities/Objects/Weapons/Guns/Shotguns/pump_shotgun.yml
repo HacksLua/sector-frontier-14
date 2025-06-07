@@ -1,5 +1,5 @@
 - type: entity
-  parent: RMCBaseWeaponShotgun
+  parent: [BaseC3Contraband, RMCBaseWeaponShotgun]
   name: M42A2 Pump Shotgun
   id: WeaponShotgunM42A2
   description: An Aegis Battlefield Armaments classic design, the M42A2 combines close-range firepower with long term reliability. Needs to be pumped.
@@ -9,6 +9,7 @@
   - type: Clothing
     sprite: _RMC14/Objects/Weapons/Guns/Shotguns/m42a2.rsi
   - type: Gun
+    fireRate: 1.3
     shotsPerBurst: 1
   # - type: RMCSelectiveFire
   #   baseFireModes:

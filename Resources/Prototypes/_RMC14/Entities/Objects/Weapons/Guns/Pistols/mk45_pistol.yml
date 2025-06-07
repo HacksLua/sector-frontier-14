@@ -1,5 +1,5 @@
 - type: entity
-  parent: CMWeaponPistolBase
+  parent: [BaseC2ExpeditionContraband, CMWeaponPistolBase]
   id: RMCWeaponPistolMK45
   name: "MK-45 'high-power' automagnum"
   description: Originally designed as a replacement for the UNMC's M44 combat revolver, it was rejected at the last minute by a committee, citing its need to be cocked after every loaded magazine to be too cumbersone and antiquated.
@@ -18,6 +18,19 @@
   - type: MagazineAmmoProvider
     autoEject: false
     soundAutoEject: null
+  - type: Gun
+    minAngle: 0
+    maxAngle: 35
+    angleIncrease: 5
+    angleDecay: 5
+    fireRate: 2
+    soundGunshot:
+      collection: N14AntiMaterielGunshot
+    selectedMode: SemiAuto
+    shotsPerBurst: 3
+    availableModes:
+    - SemiAuto
+    - Burst
   - type: ItemSlots
     slots:
       gun_magazine:
@@ -84,7 +97,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 36
+        Piercing: 35
 
 - type: Tag
   id: RMCMagazinePistolMK45

@@ -1,6 +1,6 @@
 - type: entity
   name: M54CE2 heavy assault rifle
-  parent: CMBaseWeaponRifle
+  parent: [BaseC3Contraband, CMBaseWeaponRifle]
   id: WeaponRifleM54CE2
   description: A large squad support weapon capable of laying down sustained suppressing fire from a mounted position. While unstable and less accurate, it can be lugged and shot with two hands.
   components:
@@ -11,6 +11,9 @@
       map: [ "enum.GunVisualLayers.Base" ]
     - state: mag-0
       map: [ "enum.GunVisualLayers.Mag" ]
+  - type: HeldSpeedModifier
+    walkModifier: 0.75
+    sprintModifier: 0.75
   - type: Clothing
     sprite: _RMC14/Objects/Weapons/Guns/Rifles/m54ce2.rsi
   - type: Tag
@@ -18,11 +21,15 @@
     - WeaponRifleM54CE2
     - RMCGunBipodFullAuto
   - type: Gun
-    shotsPerBurst: 5
-    selectedMode: SemiAuto
+    minAngle: 1
+    maxAngle: 10
+    angleIncrease: 1
+    angleDecay: 1
+    fireRate: 6
+    selectedMode: FullAuto
     availableModes:
     - SemiAuto
-    - Burst
+    - FullAuto
     soundGunshot:
       collection: CMM54CShoot
   # - type: RMCSelectiveFire
@@ -50,6 +57,7 @@
     slots:
       gun_magazine:
         name: Magazine
+        startingItem: CMMagazineRifleM54CE2
         insertSound: /Audio/_RMC14/Weapons/Guns/Reload/hpr_reload.ogg
         ejectSound: /Audio/_RMC14/Weapons/Guns/Reload/hpr_unload.ogg
         priority: 2
@@ -79,7 +87,7 @@
       tags:
       - CMCartridgeRifle10x24mm
     proto: CMCartridgeRifle10x24mm
-    capacity: 300
+    capacity: 200
   - type: Sprite
     sprite: _RMC14/Objects/Weapons/Guns/Ammunition/Magazines/m54ce2.rsi
     layers:

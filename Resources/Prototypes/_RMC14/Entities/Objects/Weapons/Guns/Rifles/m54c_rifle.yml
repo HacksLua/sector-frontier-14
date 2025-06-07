@@ -1,9 +1,12 @@
 - type: entity
-  parent: CMBaseWeaponRifle
+  parent: [BaseC3Contraband, CMBaseWeaponRifle]
   name: M54C assault rifle MK2
   id: WeaponRifleM54C
   description: The standard issue rifle of the Marines. Commonly carried by most combat personnel. Uses 10x24mm caseless ammunition.
   components:
+  - type: HeldSpeedModifier
+    walkModifier: 0.88
+    sprintModifier: 0.88
   - type: Sprite
     sprite: _RMC14/Objects/Weapons/Guns/Rifles/m54c.rsi
     layers:
@@ -18,10 +21,13 @@
       gun_magazine: !type:ContainerSlot
       gun_chamber: !type:ContainerSlot
   - type: Gun
+    minAngle: 1
+    maxAngle: 10
+    angleIncrease: 1
+    angleDecay: 1
     selectedMode: FullAuto
     availableModes:
     - SemiAuto
-    - Burst
     - FullAuto
     soundGunshot:
       collection: CMM54CShoot
@@ -39,6 +45,7 @@
     slots:
       gun_magazine:
         name: Magazine
+        startingItem: CMMagazineRifleM54C
         insertSound: /Audio/_RMC14/Weapons/Guns/Reload/m41_reload.ogg
         ejectSound: /Audio/_RMC14/Weapons/Guns/Reload/m41_unload.ogg
         priority: 2
@@ -71,7 +78,7 @@
       tags:
       - CMCartridgeRifle10x24mm
     proto: CMCartridgeRifle10x24mm
-    capacity: 40
+    capacity: 45
   - type: Sprite
     sprite: _RMC14/Objects/Weapons/Guns/Ammunition/Magazines/m54c.rsi
     layers:
@@ -171,7 +178,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 40
+        Piercing: 18
 
 - type: entity
   parent: BulletRifle10x24mm
@@ -181,7 +188,8 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 30
+        Piercing: 4
+    ignoreResistances: true
 
 - type: Tag
   id: CMMagazineRifleM54C

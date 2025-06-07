@@ -1,10 +1,13 @@
 - type: entity
-  parent: [CMBaseWeaponRifle, BaseGunWieldable]
+  parent: [BaseC3Contraband, CMBaseWeaponRifle, BaseGunWieldable]
   id: RMCSmartGun
   name: ML66A smart gun
   description: The actual firearm in the Smart Gun System. Essentially a heavy, mobile machinegun.
   components:
   - type: GunRequiresWield
+  - type: HeldSpeedModifier
+    walkModifier: 0.60
+    sprintModifier: 0.60
   - type: Sprite
     sprite: _RMC14/Objects/Weapons/Guns/SmartGuns/smart_gun.rsi
     layers:
@@ -17,8 +20,9 @@
   - type: MeleeWeapon
     damage:
       types:
-        Blunt: 20
+        Blunt: 10
   - type: Gun
+    fireRate: 14
     selectedMode: FullAuto
     availableModes:
     - FullAuto
@@ -117,7 +121,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 30
+        Piercing: 14
 
 - type: Tag
   id: RMCMagazineSmartGun

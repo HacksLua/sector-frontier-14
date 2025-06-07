@@ -1,5 +1,5 @@
 - type: entity
-  parent: CMBaseWeaponSMG
+  parent: [BaseC2ExpeditionContraband, CMBaseWeaponSMG]
   name: MP5 submachine gun
   id: WeaponSMGMP5 # TODO RMC14 10% chance to have an underbarrel grenade launcher
   description: A German design, this was one of the most widely used submachine guns in the world. It's still possible to find this firearm in the hands of collectors or gun fanatics.
@@ -15,6 +15,11 @@
   - type: Clothing
     sprite: _RMC14/Objects/Weapons/Guns/SMGs/mp5.rsi
   - type: Gun
+    fireRate: 7
+    minAngle: 1
+    maxAngle: 45
+    angleIncrease: 10
+    angleDecay: 10
     shotsPerBurst: 3
     soundGunshot:
       path: /Audio/_RMC14/Weapons/Guns/Gunshots/smg_light.ogg
@@ -112,6 +117,11 @@
   parent: Bullet10x20mm
   categories: [ HideSpawnMenu ]
   id: CMBullet9mmSMG #Yes it does use a seperate type of 9mm thats mechanically identical to 10x20mm for some reason
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 18
 
 - type: Tag
   id: CMMagazineSMGMP5

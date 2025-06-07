@@ -1,5 +1,5 @@
 - type: entity
-  parent: CMWeaponPistolBase
+  parent: [BaseC2ExpeditionContraband, CMWeaponPistolBase]
   id: CMWeaponPistolM77
   name: M77 combat pistol # TODO RMC14 sounds
   description: Standard issue Marine firearm. Also found in the hands of We-Ya PMC teams. Fires 9mm armor shredding rounds and is capable of 3-round burst.
@@ -13,9 +13,14 @@
       types:
         Blunt: 8
   - type: Gun
+    selectedMode: Burst
     shotsPerBurst: 3
+    minAngle: 10
+    maxAngle: 50
+    angleIncrease: 15
+    angleDecay: 40
+    fireRate: 1
     availableModes:
-    - SemiAuto
     - Burst
     soundGunshot:
       path: /Audio/_RMC14/Weapons/Guns/Gunshots/gun_88m4_v7.ogg
@@ -101,7 +106,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 25
+        Piercing: 18
 
 - type: Tag
   id: CMMagazinePistolM77AP

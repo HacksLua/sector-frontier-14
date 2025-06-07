@@ -1,5 +1,5 @@
 - type: entity
-  parent: RMCWeaponRevolverBase
+  parent: [BaseC2ExpeditionContraband, RMCWeaponRevolverBase]
   id: RMCWeaponRevolverM44
   name: M44 combat revolver
   description: A bulky revolver, occasionally carried by assault troops and officers in the Marine Corps, as well as civilian law enforcement. Fires .44 Magnum rounds.
@@ -123,7 +123,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 72
+        Piercing: 25
 
 - type: entity
   parent: CMBulletBase
@@ -134,7 +134,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 55
+        Piercing: 25
 
 - type: Tag
   id: RMCSpeedLoaderM44

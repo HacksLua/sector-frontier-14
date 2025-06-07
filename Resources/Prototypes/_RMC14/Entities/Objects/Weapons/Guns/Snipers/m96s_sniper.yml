@@ -1,5 +1,5 @@
 - type: entity
-  parent: RMCBaseWeaponSniperRifle
+  parent: [BaseC3ContrabandUnredeemable, RMCBaseWeaponSniperRifle]
   id: CMM96SSniperRifle
   name: M96S scoped rifle
   description: "A heavy sniper rifle manufactured by Aegis Armaments. It has a scope system and fires armor penetrating rounds out of a 15-round magazine.
@@ -28,6 +28,11 @@
         Blunt: 12
   - type: Gun
     shotsPerBurst: 1
+    minAngle: 2
+    maxAngle: 10
+    angleIncrease: 4
+    angleDecay: 16
+    fireRate: 0.6
     soundGunshot:
       path: /Audio/_RMC14/Weapons/Guns/Gunshots/gun_sniper.ogg
   # - type: RMCSelectiveFire
@@ -44,6 +49,7 @@
         whitelist:
           tags:
           - CMMagazineSniperM96S
+        startingItem: CMMagazineSniperM96S
   - type: GunRequiresWield
   - type: AttachableHolderVisuals
     offsets:
@@ -189,7 +195,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 140 # TODO RMC14 70 when aimed shot is in please someone help im dying
+        Piercing: 100 # TODO RMC14 70 when aimed shot is in please someone help im dying
 
 # TODO RMC14 incendiary
 - type: entity
@@ -198,11 +204,13 @@
   name: bullet (10x28mm)
   categories: [ HideSpawnMenu ]
   components:
+  - type: IgniteOnCollide
+    fireStacks: 2
   - type: Projectile
     damage:
       types:
         Piercing: 20
-        Heat: 10
+        Heat: 40
 
 # TODO RMC14 slow
 - type: entity
@@ -214,7 +222,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 25
+        Blunt: 100
 
 - type: entity
   parent: CMBulletSniper10x28mm

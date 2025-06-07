@@ -1,5 +1,5 @@
 - type: entity
-  parent: RMCBaseBreechloader
+  parent: [BaseC1Contraband,  RMCBaseBreechloader]
   name: M357 Rival
   id: WeaponShotgunM357
   description: A double barrel shotgun produced by Aegis. Archaic, sturdy, affordable. Only holds two 12g shells at a time.

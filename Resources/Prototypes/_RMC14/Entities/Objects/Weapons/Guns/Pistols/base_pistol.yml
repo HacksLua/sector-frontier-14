@@ -97,7 +97,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 40
+        Piercing: 15
 
 - type: Tag
   id: CMMagazinePistol

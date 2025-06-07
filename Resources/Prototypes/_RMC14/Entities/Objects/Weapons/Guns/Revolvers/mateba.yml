@@ -1,5 +1,5 @@
 - type: entity
-  parent: RMCWeaponRevolverBase
+  parent: [BaseC2ContrabandUnredeemable, RMCWeaponRevolverBase]
   id: RMCWeaponRevolverMateba
   name: Mateba autorevolver custom
   description: The .454 Mateba 6 Unica autorevolver is a semi-automatic handcannon that uses its own recoil to rotate the cylinders. Extremely rare, prohibitively costly, and unyieldingly powerful, it's found in the hands of a select few high-ranking UNMC officials. Stylish, sophisticated, and above all, extremely deadly.
@@ -12,6 +12,10 @@
   - type: Clothing
     sprite: _RMC14/Objects/Weapons/Guns/Pistols/mateba.rsi
   - type: Gun
+    minAngle: 1
+    maxAngle: 60
+    angleIncrease: 15
+    angleDecay: 50
     soundGunshot:
       path: /Audio/_RMC14/Weapons/Guns/Gunshots/gun_mateba.ogg
   - type: RevolverAmmoProvider
@@ -99,7 +103,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 72
+        Piercing: 70
 
 - type: Tag
   id: RMCSpeedLoaderMateba

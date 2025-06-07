@@ -109,7 +109,8 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 25
+        Piercing: 5
+        Structural: 50
 
 - type: Tag
   id: RMCMagazineSMGNailgun
