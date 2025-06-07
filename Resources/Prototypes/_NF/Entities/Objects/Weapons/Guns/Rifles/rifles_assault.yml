@@ -29,7 +29,7 @@
 
 - type: entity
   id: NFWeaponRifleAssaultLecter
-  parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponRifleAssaultChamber20, NFBaseWeaponFrameRifleAssaultNanotrasen ]
+  parent: [ BaseC2ExpeditionContraband, NFBaseWeaponRifleAssaultChamber20, NFBaseWeaponFrameRifleAssaultNanotrasen ]
   name: Lecter
   description: |-
     A medium end military grade assault rifle. On the receiver is a label that says 'for authorized use only.'
@@ -49,7 +49,7 @@
 #region WizDen: Rubber
 - type: entity
   id: NFWeaponRifleAssaultLecterLessLethal
-  parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponRifleAssaultChamber20Rubber, NFBaseWeaponFrameRifleAssaultNanotrasen ]
+  parent: [ BaseC2ExpeditionContraband, NFBaseWeaponRifleAssaultChamber20Rubber, NFBaseWeaponFrameRifleAssaultNanotrasen ]
   name: Lecter
   description: |-
     A medium end military grade assault rifle. On the receiver is a label that says 'for authorized use only.'
@@ -59,7 +59,7 @@
 #region DeltaV
 - type: entity
   id: NFWeaponRifleAssaultVulcan
-  parent: [ NFBaseWeaponRifleAssaultChamber30, NFBaseWeaponFrameRifleAssaultFrontierGunsmith ]
+  parent: [ BaseC2ExpeditionContraband, NFBaseWeaponRifleAssaultChamber30, NFBaseWeaponFrameRifleAssaultFrontierGunsmith ]
   name: Vulcan
   description: |-
     One of the heaviest small arms to grace Security's armory, this rifle is a modern take on a classic, informally dubbed the "Right Arm of the Free World".
@@ -75,7 +75,7 @@
 
 - type: entity
   id: NFWeaponRifleAssaultJackdaw
-  parent: [ BaseC3Contraband, NFBaseWeaponRifleAssaultChamber20, NFBaseWeaponFrameRifleAssaultFrontierGunsmith ]
+  parent: [ BaseC2ExpeditionContraband, NFBaseWeaponRifleAssaultChamber20, NFBaseWeaponFrameRifleAssaultFrontierGunsmith ]
   name: Jackdaw
   description: |-
     The beginning of the end is heralded by the song of a Jackdaw.

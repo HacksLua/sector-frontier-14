@@ -42,7 +42,7 @@
 
 - type: entity
   name: grenade rifle
-  parent: BaseWeaponLauncher
+  parent: [BaseC2ExpeditionContraband, BaseWeaponLauncher]
   id: N14WeaponRifleGrenade
   description: A break action single shot light grenade launcher, coolest thing ever, it uses 40mm grenades has ammo.
   components:

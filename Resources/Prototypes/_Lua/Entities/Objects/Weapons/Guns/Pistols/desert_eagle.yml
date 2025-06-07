@@ -124,7 +124,7 @@
     price: 500
 
 - type: entity
-  parent: DesertEagleBase
+  parent: [BaseC1Contraband, DesertEagleBase]
   id: WeaponPistolDesertEagle
   name: пустынный орёл
   description: Вот он, воплощение силы и свободы — Пустынный орёл! Одно только упоминание этого оружия вызывает волну бесшабашности и адреналина.

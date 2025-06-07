@@ -1,6 +1,6 @@
 - type: entity
   name: xC67
-  parent: BaseWeaponRifle
+  parent: [BaseC2ContrabandUnredeemable, BaseWeaponRifle]
   id: ADTWeaponRifleXC67
   description: A high end prototipe assault rifle. Uses .20 rifle ammo.
   components:

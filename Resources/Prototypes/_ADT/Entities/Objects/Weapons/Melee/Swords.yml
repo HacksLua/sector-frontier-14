@@ -1,6 +1,6 @@
 - type: entity
   name: Dark master's katana
-  parent: BaseItem
+  parent: [BaseC3SyndicateContraband, BaseItem]
   id: ADTObjectWeaponsMeleeMurasama
   description: Artifact of an ancient samurai clan. Do not give to children
   components:

@@ -1,6 +1,6 @@
 - type: entity
   name: PPCh-45s
-  parent: BaseWeaponSubMachineGun
+  parent: [BaseC2Contraband, BaseWeaponSubMachineGun]
   id: ADTObjectsWeaponSubMachineGunPPCH45S
   description: Submachine gun Chekhov 45. Magnum Shortened. A shortened version of the PPC-45 was developed in the late 2550s and early 2560s to equip crews of combat vehicles, space marines. It is also used in the KGB SSSP and security structures due to its small size.
   components:
@@ -50,7 +50,7 @@
   
 - type: entity
   name: ump
-  parent: BaseWeaponSubMachineGun
+  parent: [BaseC2ExpeditionContraband, BaseWeaponSubMachineGun]
   id: ADTObjectsWeaponSubMachineGunUmp
   description: An excellent fully automatic Heavy SMG. Uses .45 magnum ammo.
   components:

@@ -31,7 +31,7 @@
 
 - type: entity
   name: Anti-Materiel rifle
-  parent: BaseWeaponRifle
+  parent: [BaseC3SyndicateContraband, BaseWeaponRifle]
   id: N14WeaponAntiMateriel
   description: A anti materiel rifle with a ergonomic, metallic skeleton design. only seeing at it you can tell it will rip some limbs apart. Uses .50 anti-material ammo.
   components:
@@ -92,7 +92,7 @@
 
 - type: entity
   name: .50 NCR rifle
-  parent: BaseWeaponSniper
+  parent: [BaseC3SyndicateContraband, BaseWeaponSniper]
   id: N14Weapon50NcrRifle
   description: A try by the NCR to make .50 ammo a standart on normal infantry, very cheap but it will deal a lot of damage. Uses .50 anti-material ammo.
   components:
@@ -121,7 +121,7 @@
 
 - type: entity
   name: lever action carbine
-  parent: N14WeaponSniperHunting
+  parent: [BaseC1Contraband, N14WeaponSniperHunting]
   id: N14WeaponLeverCarbine
   description: A lever action short carbine. Uses .44 ammo.
   components:
@@ -152,7 +152,7 @@
 
 - type: entity
   name: lever action rifle
-  parent: N14WeaponSniperHunting
+  parent: [BaseC1Contraband, N14WeaponSniperHunting]
   id: N14WeaponLeverRifle
   description: A long lever action repeater rifle. Uses .308 ammo.
   components:
@@ -169,7 +169,7 @@
 
 - type: entity
   name: brush gun
-  parent: N14WeaponSniperHunting
+  parent: [BaseC1Contraband, N14WeaponSniperHunting]
   id: N14WeaponBrushGun
   description: A powerfull lever action carbine. Uses .45-70 gov't ammo.
   components:
@@ -193,7 +193,7 @@
 
 - type: entity
   name: pipe rifle
-  parent: N14WeaponSniperHunting
+  parent: [BaseC1Contraband, N14WeaponSniperHunting]
   id: N14WeaponPipeRifle
   description: A piece of metal pipe with a wooden stock, works has a gun and uses .308 ammo.
   components:
@@ -216,7 +216,7 @@
 
 - type: entity
   name: varmint rifle
-  parent: BaseWeaponSniper
+  parent: [BaseC1Contraband, BaseWeaponSniper]
   id: N14WeaponSniperVarmint
   description: A pre-war low power bolt action rifle, originally designed to hunt small animals this gun works fine with anything not bigger than a human. Uses 5.56 ammo.
   components:

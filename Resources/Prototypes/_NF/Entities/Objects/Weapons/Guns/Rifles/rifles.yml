@@ -1,7 +1,7 @@
 #region WizDen
 - type: entity
   id: NFWeaponRifleBarlowsBolt
-  parent: [ BaseC3SyndicateContraband, NFBaseWeaponRifleChamber30, NFBaseWeaponFrameRifleSteelbolt, BaseGunMelee ]
+  parent: [ BaseC1Contraband, NFBaseWeaponRifleChamber30, NFBaseWeaponFrameRifleSteelbolt, BaseGunMelee ]
   name: Barlows bolt-action rifle # Renamed: real brand name
   description: A weapon for hunting, or endless trench warfare. Equipped with bayonet.
   components:
@@ -14,7 +14,7 @@
 
 - type: entity
   id: NFWeaponRifleMusket
-  parent: [ NFBaseWeaponRifleChamber60, NFBaseWeaponFrameRifleSteelbolt ]
+  parent: [ BaseC1Contraband, NFBaseWeaponRifleChamber60, NFBaseWeaponFrameRifleSteelbolt ]
   name: musket
   description: This should've been in a museum long before you were born.
   components:

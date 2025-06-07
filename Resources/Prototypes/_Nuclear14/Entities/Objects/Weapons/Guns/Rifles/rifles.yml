@@ -1,6 +1,6 @@
 - type: entity
   name: R-91
-  parent: BaseWeaponRifle
+  parent: [BaseC2ExpeditionContraband, BaseWeaponRifle]
   id: N14WeaponRifleR91
   description: An old fashioned assault rifle chambered in 5.56. # TODO: Need to create projectiles, magazines and boxes for 5.56.
   components:
@@ -60,7 +60,7 @@
 
 - type: entity
   name: chinese assault rifle
-  parent: BaseWeaponRifle
+  parent: [BaseC2ExpeditionContraband, BaseWeaponRifle]
   id: N14WeaponChineseRifle
   description: A old foreing assault rifle with strange simbols on it, the chamber has enough space to hold a 7,62 bullet.
   components:
@@ -117,7 +117,7 @@
 
 - type: entity
   name: assault carbine
-  parent: BaseWeaponRifle
+  parent: [BaseC2ExpeditionContraband, BaseWeaponRifle]
   id: N14WeaponCarbine
   description: A black compact assault rifle, uses 5.56 ammo.
   components:
@@ -177,7 +177,7 @@
 
 - type: entity
   name: marksman carbine
-  parent: BaseWeaponRifle
+  parent: [BaseC2ExpeditionContraband, BaseWeaponRifle]
   id: N14WeaponMarksman
   description: A heavy semiautomatic rifle with a scope, uses 7.62 ammo.
   components:
@@ -236,7 +236,7 @@
 
 - type: entity
   name: service rifle
-  parent: BaseWeaponRifle
+  parent: [BaseC2ExpeditionContraband, BaseWeaponRifle]
   id: N14WeaponService
   description: A cheap mass produced post war rifle made by the NCR, chambered in 5.56.
   components:
@@ -294,7 +294,7 @@
 
 - type: entity
   name: scout rifle
-  parent: BaseWeaponRifle
+  parent: [BaseC2ExpeditionContraband, BaseWeaponRifle]
   id: N14WeaponScout
   description: A modified version of the service rifle made by rangers in the field. It is capable of using larger 5.56 magazines.
   components:
@@ -354,7 +354,7 @@
 
 - type: entity
   name: battle rifle
-  parent: BaseWeaponRifle
+  parent: [BaseC1Contraband, BaseWeaponRifle]
   id: N14WeaponBattleRifle
   description: A long semi automatic rifle feed by clips, chambered in the powerfull 308.
   components:
@@ -414,7 +414,7 @@
 
 - type: entity
   name: carbine
-  parent: BaseWeaponRifle
+  parent: [BaseC2ExpeditionContraband, BaseWeaponRifle]
   id: N14WeaponOldCarbine
   description: A short compact rifle of the pre-war, chambered in 5.56.
   components:

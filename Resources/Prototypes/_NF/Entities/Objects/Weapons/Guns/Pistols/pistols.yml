@@ -1,7 +1,7 @@
 #region WizDen
 - type: entity
   id: NFWeaponPistolMk58
-  parent: [ NFBaseWeaponPistolChamber35, NFBaseWeaponFramePistolNanotrasen ]
+  parent: [ BaseC1Contraband, NFBaseWeaponPistolChamber35, NFBaseWeaponFramePistolNanotrasen ]
   name: mk58
   description: A cheap semiauto sidearm.
   components:
@@ -15,7 +15,7 @@
 
 - type: entity
   id: NFWeaponPistolN1984
-  parent: [ NFBaseWeaponPistolChamber45, NFBaseWeaponFramePistolNanotrasen ]
+  parent: [ BaseC1Contraband, NFBaseWeaponPistolChamber45, NFBaseWeaponFramePistolNanotrasen ]
   name: N1984
   description: |-
     The sidearm of any self respecting officer. On the handle is a label that says 'for authorized use only.'
@@ -27,7 +27,7 @@
 
 - type: entity
   id: NFWeaponPistolCobra
-  parent: [ NFBaseWeaponPistolChamber45, NFBaseWeaponFramePistolCybersun ]
+  parent: [ BaseC1Contraband, NFBaseWeaponPistolChamber45, NFBaseWeaponFramePistolCybersun ]
   name: cobra
   description: |-
     A rugged, robust operator handgun with inbuilt silencer. An illegal firearm often used by Syndicate agents.
@@ -45,7 +45,7 @@
 #region DeltaV
 - type: entity
   id: NFWeaponPistolUniversal
-  parent: [ NFBaseWeaponPistolChamber35, NFBaseWeaponFramePistolNanotrasen ]
+  parent: [ BaseC1Contraband, NFBaseWeaponPistolChamber35, NFBaseWeaponFramePistolNanotrasen ]
   name: mk32 "Universal"
   description: The Mark 32 Offensive Handgun.
   components:
@@ -59,7 +59,7 @@
 
 - type: entity
   id: NFWeaponPistolUniversalNfsd
-  parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponPistolChamber35HighCapacityOverpressure, NFWeaponPistolUniversal ]
+  parent: [ BaseC2ExpeditionContraband, NFBaseWeaponPistolChamber35HighCapacityOverpressure, NFWeaponPistolUniversal ]
   name: mk32-M "Universal" service pistol
   description: |-
     The Mark 32 Offensive Service Pistol. On the handle is a label that says 'for authorized use only.'

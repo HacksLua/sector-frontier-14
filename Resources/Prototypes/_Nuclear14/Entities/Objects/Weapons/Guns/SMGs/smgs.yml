@@ -1,6 +1,6 @@
 - type: entity
   name: 10mm SMG
-  parent: BaseWeaponSubMachineGun
+  parent: [BaseC2ExpeditionContraband, BaseWeaponSubMachineGun]
   id: N14WeaponSubMachineGun10mm
   description: Fully automatic submachinegun chambered in 10mm. # TODO: Need to create projectiles, magazines and boxes for 10mm.
   components:
@@ -62,7 +62,7 @@
 
 - type: entity
   name: 12.7mm SMG
-  parent: BaseWeaponSubMachineGun
+  parent: [BaseC2ExpeditionContraband, BaseWeaponSubMachineGun]
   id: N14WeaponSubMachineGun12mm
   description: A heavy submachinegun chambered in 12mm. # TODO: Need to create projectiles, magazines and boxes for 12mm.
   components:
@@ -123,7 +123,7 @@
 
 - type: entity
   name: 12.7mm autopipe
-  parent: BaseWeaponSubMachineGun
+  parent: [BaseC2ExpeditionContraband, BaseWeaponSubMachineGun]
   id: N14weapon12mmpipe
   description: a makeshift 12mm SMG, looks like is gonna explode the second it shoots.
   components:
@@ -186,7 +186,7 @@
 
 - type: entity
   name: 10mm autopipe
-  parent: BaseWeaponSubMachineGun
+  parent: [BaseC3Contraband, BaseWeaponSubMachineGun]
   id: N14weapon10mmpipe
   description: a makeshift 10mm SMG, if you shake it you could hear the loose parts inside of the gun.
   components:
@@ -248,7 +248,7 @@
 
 - type: entity
   name: advanced 12.7mm SMG
-  parent: BaseWeaponSubMachineGun
+  parent: [BaseC2ExpeditionContraband, BaseWeaponSubMachineGun]
   id: N14WeaponAdvanceSubMachineGun12mm
   description: A bulky sub machine gun with a top magazine fed system, it uses 12mm ammmo.
   components:
@@ -309,7 +309,7 @@
 
 - type: entity
   name: 9mm SMG
-  parent: BaseWeaponSubMachineGun
+  parent: [BaseC2ExpeditionContraband, BaseWeaponSubMachineGun]
   id: N14weapon9mmSMG
   description: a metallic pre-war simple SMG, chambered in 9mm.
   components:
@@ -371,7 +371,7 @@
 
 - type: entity
   name: .45 SMG
-  parent: BaseWeaponSubMachineGun
+  parent: [BaseC2ExpeditionContraband, BaseWeaponSubMachineGun]
   id: N14Weapon45SMG
   description: A pre-war SMG with a wooden stock, chambered in .45.
   components:

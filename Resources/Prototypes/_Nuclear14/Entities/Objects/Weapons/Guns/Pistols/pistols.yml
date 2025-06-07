@@ -62,7 +62,7 @@
 
 - type: entity
   name: 9mm Pistol
-  parent: N14BaseWeaponPistol
+  parent: [BaseC1Contraband, N14BaseWeaponPistol]
   id: N14WeaponPistol9mm
   description: A cheap, ubiquitous sidearm, chambered in 9 mm.
   components:
@@ -97,7 +97,7 @@
 
 - type: entity
   name: 10mm Pistol
-  parent: N14BaseWeaponPistol
+  parent: [BaseC1Contraband, N14BaseWeaponPistol]
   id: N14WeaponPistol10mm
   description: A cheap, ubiquitous sidearm, chambered in 10mm. # TODO: Need to create projectiles, magazines and boxes for 10mm.
   components:
@@ -132,7 +132,7 @@
 
 - type: entity
   name: .45 handgun
-  parent: N14BaseWeaponPistol
+  parent: [BaseC1Contraband, N14BaseWeaponPistol]
   id: N14WeaponPistolColt
   description: A rugged handgun chambered in .45.
   components:
@@ -174,7 +174,7 @@
 
 - type: entity
   name: 12.7mm handgun
-  parent: N14BaseWeaponPistol
+  parent: [BaseC1Contraband, N14BaseWeaponPistol]
   id: N14WeaponPistol12mm
   description: A rugged, robust handgun chambered in 12.7mm. # TODO: Need to create projectiles, magazines and boxes for 12mm.
   components:
@@ -216,7 +216,7 @@
 
 - type: entity
   name: 10mm pipe pistol
-  parent: N14BaseWeaponPistol
+  parent: [BaseC1Contraband, N14BaseWeaponPistol]
   id: N14WeaponPipe10mm
   description: a light 10mm makeshift pistol, the grip is incredibly uncomfortable.
   components:
@@ -251,7 +251,7 @@
 
 - type: entity
   name: chinese pistol
-  parent: BaseWeaponSniper
+  parent: [BaseC1Contraband, BaseWeaponSniper]
   id: N14WeaponPistolChinese
   description: A elegant and long barrel pistol with a integrated magazine, chambered in 9 mm.
   components:
@@ -292,7 +292,7 @@
 
 - type: entity
   name: the spy
-  parent: BaseWeaponSniper
+  parent: [BaseC3Contraband, BaseWeaponSniper]
   id: N14WeaponPistolSpy
   description: A modified version of the common chinese pistols. with a integrated silencer, extended mag and fully automatic conversion this gun was designed with passion, chambered in 9 mm.
   components:
@@ -333,7 +333,7 @@
 
 - type: entity
   name: 22lr Pistol
-  parent: N14BaseWeaponPistol
+  parent: [BaseC1Contraband, N14BaseWeaponPistol]
   id: N14WeaponPistol22lr
   description: A simple and silenced pistol, chambered in 22lr.
   components:

@@ -1,6 +1,6 @@
 - type: entity
   name: automatic rifle
-  parent: BaseWeaponRifle
+  parent: [BaseC2ExpeditionContraband, BaseWeaponRifle]
   id: N14WeaponAutoRifle
   description: A high caliber long and heavy machine gun of the pre-war, chambered in the powerfull 308.
   components:

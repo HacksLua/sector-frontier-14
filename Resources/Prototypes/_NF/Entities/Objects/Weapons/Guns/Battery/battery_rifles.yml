@@ -2,7 +2,7 @@
 #region Laser
 - type: entity
   id: NFWeaponEnergyRifleCarbine
-  parent: [ NFBaseWeaponEnergyRifleFireModes, NFBaseWeaponFrameEnergyRifleNanotrasen ]
+  parent: [ BaseC1Contraband, NFBaseWeaponEnergyRifleFireModes, NFBaseWeaponFrameEnergyRifleNanotrasen ]
   name: laser carbine
   suffix: Frontier
   description: |-
@@ -29,7 +29,7 @@
 #region Pulse
 - type: entity
   id: NFWeaponEnergyRiflePulse
-  parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponEnergyRifleHitScanPulse, NFBaseWeaponFrameEnergyRifleNanotrasen ]
+  parent: [ BaseC2Contraband, NFBaseWeaponEnergyRifleHitScanPulse, NFBaseWeaponFrameEnergyRifleNanotrasen ]
   name: pulse rifle
   description: |-
     A weapon that is almost as infamous as its users. On the handle is a label that says 'for authorized use only.'
@@ -45,7 +45,7 @@
 #region Other
 - type: entity
   name: emp emitter
-  parent: [BaseC2ContrabandUnredeemable, NFBaseWeaponEnergyRifleEmp, NFBaseWeaponFrameEnergyRifleNanotrasen ]
+  parent: [BaseC2ExpeditionContraband, NFBaseWeaponEnergyRifleEmp, NFBaseWeaponFrameEnergyRifleNanotrasen ]
   id: WeaponEmpEmitter
   description: |-
     Releases electromagnetic pulses that disrupt or damage many electronic devices or drain power cells, has a slow self charging nuclear powered battery.
@@ -80,7 +80,7 @@
 #region Thermal
 - type: entity
   id: NFWeaponEnergyRifleTemperature
-  parent: [ NFBaseWeaponFrameEnergyRifleNanotrasen ] # chamber defined below, no huge value in a one-off
+  parent: [ BaseC3ContrabandUnredeemable, NFBaseWeaponFrameEnergyRifleNanotrasen ] # chamber defined below, no huge value in a one-off
   name: temperature gun
   description: An advanced gun that shoots beams capable of heating or cooling their target.
   components:

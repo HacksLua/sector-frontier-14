@@ -43,7 +43,7 @@
 
 - type: entity
   name: Python
-  parent: BaseWeaponRevolver357
+  parent: [BaseC1Contraband, BaseWeaponRevolver357]
   id: WeaponRevolverPython357
   description: A robust revolver favoured by Syndicate agents. Uses .357 magnum ammo.
   components:
@@ -63,7 +63,7 @@
 
 - type: entity
   name: Unica 6
-  parent: BaseWeaponRevolver357
+  parent: [BaseC1Contraband, BaseWeaponRevolver357]
   id: WeaponRevolverUnica
   description: Legendary weapon of death squad and angry HoS
   components:

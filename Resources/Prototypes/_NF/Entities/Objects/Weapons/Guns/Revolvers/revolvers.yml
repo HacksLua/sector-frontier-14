@@ -1,7 +1,7 @@
 #region WizDen
 - type: entity
   id: NFWeaponRevolverInspector
-  parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponRevolverChamber45, NFBaseWeaponFrameRevolverNanotrasen ]
+  parent: [ BaseC1Contraband, NFBaseWeaponRevolverChamber45, NFBaseWeaponFrameRevolverNanotrasen ]
   name: inspector
   description: |-
     A detective's best friend. On the handle is a label that says 'for authorized use only.'
@@ -13,7 +13,7 @@
 
 - type: entity
   id: NFWeaponRevolverWard45
-  parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponRevolverChamber45, NFBaseWeaponFrameRevolverNanotrasen ]
+  parent: [ BaseC1Contraband, NFBaseWeaponRevolverChamber45, NFBaseWeaponFrameRevolverNanotrasen ]
   name: ward-45
   description: |-
     The iconic sidearm of the dreaded death squads. On the handle is a label that says 'for authorized use only.'

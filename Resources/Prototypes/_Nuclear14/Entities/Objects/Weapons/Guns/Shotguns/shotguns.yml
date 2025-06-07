@@ -1,6 +1,6 @@
 - type: entity
   name: double-barrel shotgun
-  parent: BaseWeaponShotgun
+  parent: [BaseC1Contraband, BaseWeaponShotgun]
   id: N14WeaponDoubleBarrelShotgun
   description: An immortal classic, uses 12 gauge shells.
   components:
@@ -31,7 +31,7 @@
 
 - type: entity
   name: shotgun
-  parent: BaseWeaponShotgun
+  parent: [BaseC1Contraband, BaseWeaponShotgun]
   id: N14WeaponShotgun
   description: A pump action shotgun.
   components:
@@ -62,7 +62,7 @@
 
 - type: entity
   name: combat shotgun
-  parent: BaseItem
+  parent: [BaseC1Contraband, BaseItem]
   id: N14WeaponAutoShotgun
   description: It's a magazine-fed automatic shotgun designed for close quarters combat, uses 12 gauge shells.
   components:
@@ -122,7 +122,7 @@
 
 - type: entity
   name: caravan shotgun
-  parent: BaseWeaponShotgun
+  parent: [BaseC1Contraband, BaseWeaponShotgun]
   id: N14WeaponCaravanShotgun
   description: The perfect shotgun for a long jorney. works well for hunting brahmins, geckos and fiends, uses 20 gauge shells.
   components:
@@ -153,7 +153,7 @@
 
 - type: entity
   name: lever action shotgun
-  parent: BaseWeaponShotgun
+  parent: [BaseC1Contraband, BaseWeaponShotgun]
   id: N14WeaponLeverShotgun
   description: The perfect gun for a cowboy, it uses 20 gauge shells.
   components:
@@ -188,7 +188,7 @@
 
 - type: entity
   name: riot shotgun
-  parent: BaseItem
+  parent: [BaseC1Contraband, BaseItem]
   id: N14WeaponRiotShotgun
   description: A compact semi automatic shotgun used by the police forces of the pre war, chambered in 20 gauge shells.
   components:

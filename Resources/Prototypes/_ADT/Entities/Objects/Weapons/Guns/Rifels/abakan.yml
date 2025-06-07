@@ -1,6 +1,6 @@
 - type: entity
   name: AEK-974
-  parent: BaseItem
+  parent: [BaseC3Contraband, BaseItem]
   id: ADTAbakanRifleAEK
   description: Rifles
   components:
@@ -62,7 +62,7 @@
 
 - type: entity
   name: AN-97
-  parent: BaseItem
+  parent: [BaseC3Contraband, BaseItem]
   id: ADTGunRifleAN
   description: Rifles
   components:
