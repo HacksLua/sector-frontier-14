@@ -62,7 +62,7 @@
     tags:
     - Wheat
   - type: StaticPrice
-    price: 50
+    price: 2 #50
 
 - type: entity
   name: meatwheat bushel
@@ -110,7 +110,7 @@
       - ReagentId: MilkOat
         Quantity: 5
   - type: StaticPrice
-    price: 50
+    price: 2 #50
 
 - type: entity
   name: sugarcane
@@ -273,7 +273,7 @@
   - type: Extractable
     grindableSolutionName: food
   - type: StaticPrice
-    price: 55
+    price: 2 #55
 
 - type: entity
   name: death nettle
@@ -350,7 +350,7 @@
       types:
         Blunt: 5 # The nettle will "wilt" after 5 hits.
   - type: StaticPrice
-    price: 67
+    price: 7 #67
 
 - type: entity
   name: banana
@@ -588,7 +588,7 @@
       Burger: CarrotBurger
       Taco: Carrot
   - type: StaticPrice
-    price: 50
+    price: 15 #50
 
 - type: entity
   name: cabbage
@@ -622,7 +622,7 @@
       Burger: CabbageBurger
       Taco: Cabbage
   - type: StaticPrice
-    price: 50
+    price: 2 #50
 
 - type: entity
   name: garlic
@@ -659,7 +659,7 @@
     - Vegetable
     - MedipenLathe
   - type: StaticPrice
-    price: 50
+    price: 5 #50
   - type: FoodSequenceElement
     entries:
       Burger: GarlicBurger
@@ -929,7 +929,7 @@
       Burger: Potato
       Taco: Potato
   - type: StaticPrice
-    price: 50
+    price: 5 #50
 
 
 - type: entity
@@ -1045,7 +1045,7 @@
       Burger: BlueTomato
       Taco: BlueTomato
   - type: StaticPrice
-    price: 14
+    price: 4
 
 - type: entity
   name: blood tomato
@@ -1135,7 +1135,7 @@
     - Fruit
     - Vegetable
   - type: StaticPrice
-    price: 12
+    price: 2
 
 - type: entity
   name: apple
@@ -1299,7 +1299,7 @@
       Taco: Corn
       Skewer: CornSkewer
   - type: StaticPrice
-    price: 75
+    price: 5 #75
 
 - type: entity
   name: corn cob
@@ -1358,7 +1358,7 @@
     tags:
     - Vegetable
   - type: StaticPrice
-    price: 55
+    price: 5 #55
 
 - type: entity
   name: red onion
@@ -1415,7 +1415,7 @@
     tags:
     - Vegetable
   - type: StaticPrice
-    price: 30
+    price: 5 #30
 
 # Slices
 
@@ -1563,7 +1563,7 @@
     - Vegetable
     - MedipenLathe
   - type: StaticPrice
-    price: 12
+    price: 6
   - type: FoodSequenceElement
     entries:
       Taco: ChiliPepper
@@ -1612,7 +1612,7 @@
       Burger: ChillyPepper
       Skewer: ChillyPepperSkewer
   - type: StaticPrice
-    price: 12
+    price: 7 #12
 
 - type: entity
   name: aloe
@@ -1651,7 +1651,7 @@
     - Vegetable
     - MedipenLathe
   - type: StaticPrice
-    price: 50
+    price: 2 #50
   - type: FoodSequenceElement
     entries:
       Taco: Aloe
@@ -1696,7 +1696,7 @@
     - Flower # TODO add "RedFlower" or "Poppy" tag, when other color flowers will be
     - MedipenLathe
   - type: StaticPrice
-    price: 50
+    price: 5 #50
   - type: FoodSequenceElement
     entries:
       Taco: Poppy
@@ -1737,7 +1737,7 @@
     - Flower
     - MedipenLathe
   - type: StaticPrice
-    price: 48
+    price: 8 #48
   - type: FoodSequenceElement
     entries:
       Taco: Lily
@@ -1784,7 +1784,7 @@
       Taco: Lingzhi
       Burger: Lingzhi
   - type: StaticPrice
-    price: 50
+    price: 5 #10
 
 - type: entity
   name: ambrosia vulgaris
@@ -1814,7 +1814,7 @@
         - ReagentId: Nutriment
           Quantity: 2
         - ReagentId: Desoxyephedrine
-          Quantity: 10
+          Quantity: 3
         - ReagentId: Vitamin
           Quantity: 2
   - type: Sprite
@@ -1834,7 +1834,7 @@
     - Ambrosia
     - MedipenLathe
   - type: StaticPrice
-    price: 50
+    price: 5
   - type: FoodSequenceElement
     entries:
       Taco: AmbrosiaVulgaris
@@ -1867,8 +1867,6 @@
           Quantity: 5
         - ReagentId: Nutriment
           Quantity: 2
-        - ReagentId: Desoxyephedrine
-          Quantity: 10
   - type: Sprite
     sprite: Objects/Specific/Hydroponics/ambrosia_deus.rsi
   - type: Item
@@ -1886,7 +1884,7 @@
     - Ambrosia
     - MedipenLathe
   - type: StaticPrice
-    price: 1
+    price: 1 #15
   - type: FoodSequenceElement
     entries:
       Taco: AmbrosiaDeus
@@ -1928,7 +1926,7 @@
     - Fruit # Probably?
     - MedipenLathe
   - type: StaticPrice
-    price: 50
+    price: 2 #50
   - type: FoodSequenceElement
     entries:
       Taco: Galaxythistle
@@ -2043,7 +2041,7 @@
       Taco: FlyAmanita
       Burger: FlyAmanita
   - type: StaticPrice
-    price: 45
+    price: 3 #45
 
 - type: entity
   name: gatfruit
@@ -2081,7 +2079,7 @@
     - Fruit # It's in the name
     - MedipenLathe
   - type: StaticPrice
-    price: 90
+    price: 5 #90
   - type: FoodSequenceElement
     entries:
       Taco: Gatfruit
@@ -2153,7 +2151,7 @@
   - type: Produce
     seedId: rice
   - type: StaticPrice
-    price: 50
+    price: 3 #50
 
 - type: entity
   name: soybeans
@@ -2185,7 +2183,7 @@
       Taco: Soybeans
       Burger: SoybeansBurger
   - type: StaticPrice
-    price: 50
+    price: 4 #50
 
 - type: entity
   name: spaceman's trumpet
@@ -2262,7 +2260,7 @@
       Taco: Koibean
       Burger: KoibeanBurger
   - type: StaticPrice
-    price: 58
+    price: 6 #58
 
 - type: entity
   name: watermelon
@@ -2327,7 +2325,7 @@
     tags:
     - Fruit
   - type: StaticPrice
-    price: 150
+    price: 5 #150
 
 - type: entity
   name: watermelon slice
@@ -2505,7 +2503,7 @@
     tags:
     - Fruit
   - type: StaticPrice
-    price: 50
+    price: 5 #50
 
 - type: entity
   name: berries
@@ -2732,7 +2730,7 @@
     - Fruit
     - Vegetable
   - type: StaticPrice
-    price: 55
+    price: 5 #55
 
 - type: entity
   name: blue pumpkin
@@ -2818,7 +2816,7 @@
       CottonBurger: CottonBol
   - type: MothFood # Frontier
   - type: StaticPrice
-    price: 50
+    price: 2 #50
 
 - type: entity
   name: pyrotton boll
@@ -2857,7 +2855,7 @@
       CottonBurger: PyrottonBol
   - type: MothFood # Frontier
   - type: StaticPrice
-    price: 67
+    price: 7 #67
 
 - type: entity
   name: cherry
