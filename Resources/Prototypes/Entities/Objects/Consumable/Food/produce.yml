@@ -1045,7 +1045,7 @@
       Burger: BlueTomato
       Taco: BlueTomato
   - type: StaticPrice
-    price: 4
+    price: 4 #14
 
 - type: entity
   name: blood tomato
@@ -1135,7 +1135,7 @@
     - Fruit
     - Vegetable
   - type: StaticPrice
-    price: 2
+    price: 2 #12
 
 - type: entity
   name: apple
@@ -1563,7 +1563,7 @@
     - Vegetable
     - MedipenLathe
   - type: StaticPrice
-    price: 6
+    price: 6 #12
   - type: FoodSequenceElement
     entries:
       Taco: ChiliPepper
@@ -1814,7 +1814,7 @@
         - ReagentId: Nutriment
           Quantity: 2
         - ReagentId: Desoxyephedrine
-          Quantity: 3
+          Quantity: 3 #10
         - ReagentId: Vitamin
           Quantity: 2
   - type: Sprite
@@ -1867,6 +1867,8 @@
           Quantity: 5
         - ReagentId: Nutriment
           Quantity: 2
+        - ReagentId: Desoxyephedrine
+          Quantity: 5 #10
   - type: Sprite
     sprite: Objects/Specific/Hydroponics/ambrosia_deus.rsi
   - type: Item
