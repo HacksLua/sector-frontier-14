@@ -54,7 +54,7 @@
         conditions:
         - !type:ReagentThreshold
           min: 20
-  pricePerUnit: 10 #12
+  pricePerUnit: 5 #12
 
 - type: reagent
   id: Ephedrine
@@ -108,7 +108,7 @@
         conditions:
         - !type:ReagentThreshold
           min: 30
-  pricePerUnit: 6
+  pricePerUnit: 3
 
 - type: reagent
   id: Stimulants
@@ -182,7 +182,7 @@
             groups:
               Burn: -1
               Brute: -1
-  pricePerUnit: 13 #14
+  pricePerUnit: 8 #14
 
 - type: reagent
   id: THC
@@ -207,7 +207,7 @@
         type: Add
         time: 16
         refresh: false
-  pricePerUnit: 2
+  pricePerUnit: 1
 
 - type: reagent
   id: Nicotine
@@ -220,7 +220,7 @@
   plantMetabolism:
   - !type:PlantAdjustHealth
     amount: -5
-  pricePerUnit: 2
+  pricePerUnit: 1
 
 # TODO: Replace these nonstandardized effects with generic brain damage
 - type: reagent
@@ -313,7 +313,7 @@
         component: ForcedSleeping
         refresh: false
         type: Add
-  pricePerUnit: 11 #13
+  pricePerUnit: 7 #13
 
 - type: reagent
   id: MuteToxin
@@ -333,7 +333,7 @@
         type: Add
         time: 10
         refresh: false
-  pricePerUnit: 12 #13
+  pricePerUnit: 7 #13
 
 - type: reagent
   id: NorepinephricAcid
@@ -378,7 +378,7 @@
         conditions:
         - !type:ReagentThreshold
           min: 20
-  pricePerUnit: 9 #17
+  pricePerUnit: 6 #17
 
 - type: reagent
   id: TearGas
@@ -475,4 +475,4 @@
         type: Add
         time: 5
         refresh: false
-  pricePerUnit: 10
+  pricePerUnit: 5
