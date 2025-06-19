@@ -14,7 +14,7 @@
     mayTransfer: true
     whitelist:
       tags:
-        - CartridgeMagnum
+        - NFCartridgePistol45
     capacity: 8
   - type: Item
     size: Small
@@ -110,7 +110,7 @@
         priority: 1
         whitelist:
           tags:
-            - CartridgeMagnum
+            - NFCartridgePistol45
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot

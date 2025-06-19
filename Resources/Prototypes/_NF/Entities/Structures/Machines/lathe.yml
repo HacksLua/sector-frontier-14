@@ -212,6 +212,7 @@
     idleState: icon
     runningState: icon
     staticPacks:
+    - GoobWeaponAmmo
     - NFMercenaryTechfabDeprecatedStatic
     - NfsdPracticeStatic
   - type: BlueprintReceiver

@@ -52,7 +52,7 @@
   - type: Gun
     angleIncrease: 0.5
     angleDecay: 2
-    fireRate: 3.5
+    fireRate: 6
   - type: NFWeaponDetails
     manufacturer: weapon-details-manufacturer-cybersun-industries
 

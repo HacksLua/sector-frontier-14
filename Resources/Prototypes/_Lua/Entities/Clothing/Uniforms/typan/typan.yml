@@ -3,7 +3,7 @@
 # See AGPLv3.txt for details.
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingSyndieBaseOutpostTypan
   id: ClothingUniformJumpskirtOutpostTypanChef
   name: юбка-комбинезон шеф-повара синдиката
   description: Без неё ничего и никого не приготовить.
@@ -14,7 +14,7 @@
     sprite: _Lua/Clothing/Uniforms/chefskirt.rsi
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingSyndieBaseOutpostTypan
   id: ClothingUniformJumpskirtOutpostTypanMedic
   name: юбка-комбинезон медика синдиката
   description: Практичность юбки обусловлена тяжестью стирания крови.
@@ -58,7 +58,7 @@
     sprite: _Lua/Clothing/Uniforms/suitchef.rsi
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingSyndieBaseOutpostTypan
   id: ClothingUniformJumpsuitOutpostTypanDirectory
   name: парадная форма директора исследований синдиката
   description: Роскошная униформа директора исследований, для особых случаев.
@@ -69,7 +69,7 @@
     sprite: _Lua/Clothing/Uniforms/directory.rsi
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingSyndieBaseOutpostTypan
   id: ClothingUniformJumpsuitOutpostTypanMedic
   name: комбинезон медика синдиката
   description: Удобный комбинезон для оказания различного рода медицинских услуг
@@ -80,7 +80,7 @@
     sprite: _Lua/Clothing/Uniforms/suitmedical.rsi
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingSyndieBaseOutpostTypan
   id: ClothingUniformScienceRDOutpostTypan
   name: униформа директора исследований
   description: Слегка выцветшая от химикатов униформа.
@@ -102,7 +102,7 @@
     sprite: ADT/Clothing/Uniforms/Jumpsuit/investigator_suit.rsi
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingSyndieBaseOutpostTypan
   id: ClothingUniformJumpskirtOutpostTypanBotanist
   name: юбка-комбинезон ботаника синдиката
   description: Имеет сильный запах земли. Будем надеяться, что она просто грязная, а не вся в земле.
@@ -113,7 +113,7 @@
     sprite: _Lua/Clothing/Uniforms/botanistskirt.rsi
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingSyndieBaseOutpostTypan
   id: ClothingUniformJumpskirtOutpostTypanCargotech
   name: юбка-комбинезон карготехника синдиката
   description: Удобный прочный комбинезон, теперь с юбкой.
