@@ -187,6 +187,20 @@
   - type: Clothing
     sprite: ADT/Clothing/Uniforms/Jumpsuit/johan_pants.rsi
 
+#Pyotr
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ADTClothingUniformPyotr
+  name: dark grenn suit
+  description: dark grenn suit
+  suffix: Big_Chungus
+  components:
+  - type: Sprite
+    sprite: ADT/Clothing/Uniforms/Jumpsuit/pyotr_officialsuit.rsi
+  - type: Clothing
+    sprite: ADT/Clothing/Uniforms/Jumpsuit/pyotr_officialsuit.rsi
+
 #Комбинезон следователя
 
 - type: entity

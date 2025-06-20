@@ -25,3 +25,7 @@ ent-ADTClothingNeckSyndicateCloak = плащ Синдиката
 ent-ADTClothingNeckNukeOpsCloak = плащ Ядерных Оперативников
     .desc = Согреет вас холодными вечерами на аванпосте Ядерных Оперативников.
     .suffix = { "" }
+
+ent-ADTClothingNeckPyotrCloak = темно-зеленый плащ
+    .desc = Плащ из плотной ткани темно-зеленого цвета с золотой вышивкой.
+    .suffix = { "Big_Chungus" }
