@@ -245,6 +245,7 @@
       Nettle: 100
   - type: Stack
     stackType: Nettle
+    count: 1
   - type: Tag
     tags:
     - MedipenLathe
@@ -287,6 +288,7 @@
       DeathNettle: 100
   - type: Stack
     stackType: DeathNettle
+    count: 1
   - type: Tag
     tags:
     - MedipenLathe
@@ -636,6 +638,7 @@
       FoodGarlic: 100
   - type: Stack
     stackType: FoodGarlic
+    count: 1
   - type: FlavorProfile
     flavors:
       - garlic
@@ -1059,6 +1062,7 @@
       FoodBloodTomato: 100
   - type: Stack
     stackType: FoodBloodTomato
+    count: 1
   - type: SolutionContainerManager
     solutions:
       food:
@@ -1186,6 +1190,7 @@
       FoodGoldenApple: 100
   - type: Stack
     stackType: FoodGoldenApple
+    count: 1
   - type: FlavorProfile
     flavors:
       - apple
@@ -1538,6 +1543,7 @@
       FoodChiliPepper: 100
   - type: Stack
     stackType: FoodChiliPepper
+    count: 1
   - type: FlavorProfile
     flavors:
       - spicy
@@ -1582,6 +1588,7 @@
       FoodChillyPepper: 100
   - type: Stack
     stackType: FoodChillyPepper
+    count: 1
   - type: Tag
     tags:
     - MedipenLathe
@@ -1626,6 +1633,7 @@
       FoodAloe: 100
   - type: Stack
     stackType: FoodAloe
+    count: 1
   - type: FlavorProfile
     flavors:
       - medicine
@@ -1669,6 +1677,7 @@
       FoodPoppy: 100
   - type: Stack
     stackType: FoodPoppy
+    count: 1
   - type: Clothing
     slots:
     - HEAD
@@ -1714,6 +1723,7 @@
       FoodLily: 100
   - type: Stack
     stackType: FoodLily
+    count: 1
   - type: FlavorProfile
     flavors:
       - medicine
@@ -1755,6 +1765,7 @@
       FoodLingzhi: 100
   - type: Stack
     stackType: FoodLingzhi
+    count: 1
   - type: Tag
     tags:
     - MedipenLathe
@@ -1798,6 +1809,7 @@
       FoodAmbrosiaVulgaris: 100
   - type: Stack
     stackType: FoodAmbrosiaVulgaris
+    count: 1
   - type: FlavorProfile
     flavors:
       - leafy
@@ -1852,6 +1864,7 @@
       FoodAmbrosiaDeus: 100
   - type: Stack
     stackType: FoodAmbrosiaDeus
+    count: 1
   - type: FlavorProfile
     flavors:
       - leafy
@@ -1904,6 +1917,7 @@
       FoodGalaxythistle: 100
   - type: Stack
     stackType: FoodGalaxythistle
+    count: 1
   - type: FlavorProfile
     flavors:
       - medicine
@@ -2014,6 +2028,7 @@
       FoodFlyAmanita: 100
   - type: Stack
     stackType: FoodFlyAmanita
+    count: 1
   - type: Tag
     tags:
     - MedipenLathe
@@ -2057,6 +2072,7 @@
       FoodGatfruit: 100
   - type: Stack
     stackType: FoodGatfruit
+    count: 1
   - type: FlavorProfile
     flavors:
       - gunpowder
@@ -2199,6 +2215,7 @@
       FoodSpacemansTrumpet: 100
   - type: Stack
     stackType: FoodSpacemansTrumpet
+    count: 1
   - type: FlavorProfile
     flavors:
       - violets

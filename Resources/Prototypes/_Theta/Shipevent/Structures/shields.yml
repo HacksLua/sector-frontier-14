@@ -41,7 +41,7 @@
 - type: entity
   id: CircularShieldBase
   name: MS-225 shield generator
-  parent: BaseStructure
+  parent: [BaseStructureDisableToolUse, BaseStructure]
   suffix: Theta, CircularShield # Mono
   components:
     - type: CircularShield
@@ -56,8 +56,6 @@
     - type: ApcPowerReceiver
       needsPower: true
       powerLoad: 0
-    - type: Anchorable
-      delay: 10
     - type: Sprite
       sprite: _Mono/Structures/ShuttleComponents/shield.rsi
       snapCardinals: true

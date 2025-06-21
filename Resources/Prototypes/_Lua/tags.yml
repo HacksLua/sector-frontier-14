@@ -3,6 +3,15 @@
 # See AGPLv3.txt for details.
 
 - type: Tag
+  id: PurspaceManupulator
+
+- type: Tag
+  id: PurspaceCapacitor
+
+- type: Tag
+  id: PurspaceMatterbin
+
+- type: Tag
   id: MedipenLathe
 
 - type: Tag

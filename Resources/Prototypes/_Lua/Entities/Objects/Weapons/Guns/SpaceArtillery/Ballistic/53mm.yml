@@ -4,10 +4,10 @@
 
 - type: entity
   parent: BaseWeaponNavalBallisctic
-  id: Weapon53mmBase
+  id: Weapon53mm
   name: Пулемёт "53мм"
   description: Средний пулемёт, использует снаряды 53мм.
-  suffix: НЕ МАППИТЬ!, ShuttleGun
+  suffix: ShuttleGun
   placement:
     mode: SnapgridCenter
   components:
@@ -19,16 +19,10 @@
       drawdepth: Mobs
       layers:
         - state: turrets53mm
-    - type: ItemSlots
-      slots:
-        gun_magazine:
-          whitelist:
-            tags:
-              - Magazine53mm
-        gun_chamber:
-          whitelist:
-            tags:
-              - Cartridge53mm
+    - type: ContainerContainer
+      containers:
+        machine_board: !type:Container
+        machine_parts: !type:Container
     - type: Gun
       fireRate: 6
       projectileSpeed: 60
@@ -36,48 +30,27 @@
       availableModes:
         - FullAuto
       soundGunshot: /Audio/Weapons/Guns/Gunshots/gun_sentry.ogg
-    - type: ChamberMagazineAmmoProvider
-      boltClosed: null
-    - type: ContainerContainer
-      containers:
-        gun_magazine: !type:ContainerSlot
-        gun_chamber: !type:ContainerSlot
-        machine_board: !type:Container
-        machine_parts: !type:Container
-
-- type: entity
-  parent: Weapon53mmBase
-  id: Weapon53mm
-  suffix: НЕ МАППИТЬ!, Полный, ShuttleGun
-  placement:
-    mode: SnapgridCenter
-  components:
-    - type: ItemSlots
-      slots:
-        gun_magazine:
-          startingItem: MagazineBox53mmAP
-          whitelist:
-            tags:
-              - Magazine53mm
-        gun_chamber:
-          startingItem: Cartridge53mmAP
-          whitelist:
-            tags:
-              - Cartridge53mm
-
-- type: entity
-  parent: [BaseStructureDisableToolUse, Weapon53mm, Weapon53mmBase ]
-  id: Weapon53mmUnanchor
-  suffix: Полный, Неоткрепляемый для кораблей, ShuttleGun
-  placement:
-    mode: SnapgridCenter
-
-- type: entity
-  parent: [BaseStructureDisableToolUse, Weapon53mmBase]
-  id: Weapon53mmUnanchorEmpty
-  suffix: Пустой, Неоткрепляемый для кораблей, ShuttleGun
-  placement:
-    mode: SnapgridCenter
+    - type: Battery
+      maxCharge: 1000
+      startingCharge: 1000
+    - type: ExaminableBattery
+    - type: AutoShootGun
+    - type: GunSignalControl
+    - type: WirelessNetworkConnection
+      range: 700
+    - type: DeviceLinkSink
+      ports:
+      - Toggle
+    - type: SpaceArtillery
+      powerChargeRate: 10
+      powerUseActive: 10
+      powerUsePassive: 2100
+    - type: BatterySelfRecharger
+      autoRecharge: true
+      autoRechargeRate: 10
+    - type: ProjectileBatteryAmmoProvider
+      proto: Bullet53mm
+      fireCost: 50
 
 - type: entity
   parent: BaseNFFlatpack
@@ -86,7 +59,7 @@
   description: Упакованный Средний Пулемёт (.53мм)
   components:
   - type: Flatpack
-    entity: Weapon53mmBase
+    entity: Weapon53mm
   - type: StaticPrice
     price: 250
   - type: Sprite

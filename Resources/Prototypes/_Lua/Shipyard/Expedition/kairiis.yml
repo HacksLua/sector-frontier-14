@@ -5,7 +5,7 @@
 - type: vessel
   parent: BaseVessel
   id: Kairiis
-  name: LT Кайриис
+  name: Кайриис
   description: Легкий экспедиционный шаттл использует в качестве топлива уран, оборудован лазерными турелями LuaTech
   price: 43500
   category: Small
@@ -25,7 +25,7 @@
 
 - type: gameMap
   id: Kairiis
-  mapName: 'LT Кайриис'
+  mapName: 'Кайриис'
   mapPath: /Maps/_Lua/Shuttles/Expedition/kairiis.yml
   minPlayers: 0
   stations:
@@ -35,5 +35,5 @@
         - type: StationNameSetup
           mapNameTemplate: 'Кайриис {1}'
           nameGenerator:
-            !type:NanotrasenNameGenerator
+            !type:LuaTechNameGenerator
             prefixCreator: '14'

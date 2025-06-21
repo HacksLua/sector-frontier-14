@@ -4,10 +4,10 @@
 
 - type: entity
   parent: BaseWeaponNavalBallisctic
-  id: Weapon80mmBase
+  id: Weapon80mm
   name: Пулемёт "80мм"
   description: Тяжёлый пулемёт, использует снаряды 80мм.
-  suffix: НЕ МАППИТЬ!, ShuttleGun
+  suffix: ShuttleGun
   placement:
     mode: SnapgridCenter
   components:
@@ -19,65 +19,38 @@
       drawdepth: Mobs
       layers:
         - state: turrets80mm
-    - type: ItemSlots
-      slots:
-        gun_magazine:
-          whitelist:
-            tags:
-              - Magazine80mm
-        gun_chamber:
-          whitelist:
-            tags:
-              - Cartridge80mm
+    - type: ContainerContainer
+      containers:
+        machine_board: !type:Container
+        machine_parts: !type:Container
     - type: Gun
-      fireRate: 1
+      fireRate: 2
       projectileSpeed: 60
       selectedMode: FullAuto
       availableModes:
         - FullAuto
       soundGunshot: /Audio/Weapons/Guns/Gunshots/gun_sentry.ogg
-    - type: ChamberMagazineAmmoProvider
-      boltClosed: null
-    - type: ContainerContainer
-      containers:
-        gun_magazine: !type:ContainerSlot
-        gun_chamber: !type:ContainerSlot
-        machine_board: !type:Container
-        machine_parts: !type:Container
-
-- type: entity
-  parent: Weapon80mmBase
-  id: Weapon80mm
-  suffix: НЕ МАППИТЬ!, Полный, ShuttleGun
-  placement:
-    mode: SnapgridCenter
-  components:
-    - type: ItemSlots
-      slots:
-        gun_magazine:
-          startingItem: MagazineBox80mmAP
-          whitelist:
-            tags:
-              - Magazine80mm
-        gun_chamber:
-          startingItem: Cartridge80mmAP
-          whitelist:
-            tags:
-              - Cartridge80mm
-
-- type: entity
-  parent: [BaseStructureDisableToolUse, Weapon80mm, Weapon80mmBase]
-  id: Weapon80mmUnanchor
-  suffix: Полный, Неоткрепляемый для кораблей, ShuttleGun
-  placement:
-    mode: SnapgridCenter
-
-- type: entity
-  parent: [BaseStructureDisableToolUse, Weapon80mmBase]
-  id: Weapon80mmUnanchorEmpty
-  suffix: Пустой, Неоткрепляемый для кораблей, ShuttleGun
-  placement:
-    mode: SnapgridCenter
+    - type: Battery
+      maxCharge: 500
+      startingCharge: 500
+    - type: ExaminableBattery
+    - type: AutoShootGun
+    - type: GunSignalControl
+    - type: WirelessNetworkConnection
+      range: 700
+    - type: DeviceLinkSink
+      ports:
+      - Toggle
+    - type: SpaceArtillery
+      powerChargeRate: 15
+      powerUseActive: 30
+      powerUsePassive: 1100
+    - type: BatterySelfRecharger
+      autoRecharge: true
+      autoRechargeRate: 15
+    - type: ProjectileBatteryAmmoProvider
+      proto: Bullet80mm
+      fireCost: 50
 
 - type: entity
   parent: BaseNFFlatpack
@@ -86,7 +59,7 @@
   description: Упакованный Средний Пулемёт (.80мм)
   components:
   - type: Flatpack
-    entity: Weapon80mmBase
+    entity: Weapon80mm
   - type: StaticPrice
     price: 250
   - type: Sprite

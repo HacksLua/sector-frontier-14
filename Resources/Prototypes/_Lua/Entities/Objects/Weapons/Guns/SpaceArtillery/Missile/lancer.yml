@@ -7,7 +7,7 @@
   id: WeaponMissileLauncherLancer
   name: Артиллерийская установка "Лансер-14"
   description: Точная артиллерийская установка, созданная для ведения боя на средней дистанции. Снаряд "Копьё" пробивает броню, оставляя после себя значительные разрушения.
-  suffix: НЕ МАППИТЬ!, ShuttleGun
+  suffix: ShuttleGun
   placement:
     mode: SnapgridCenter
   components:
@@ -19,47 +19,33 @@
     drawdepth: Mobs
     layers:
       - state: rocket
+  - type: ContainerContainer
+    containers:
+      machine_board: !type:Container
+      machine_parts: !type:Container
   - type: Gun
     projectileSpeed: 40
     selectedMode: FullAuto
     availableModes:
       - FullAuto
     soundGunshot: /Audio/Weapons/Guns/Gunshots/gun_sentry.ogg
-  - type: ChamberMagazineAmmoProvider
-    boltClosed: null
-  - type: ContainerContainer
-    containers:
-      gun_magazine: !type:ContainerSlot
-      gun_chamber: !type:ContainerSlot
-      machine_board: !type:Container
-      machine_parts: !type:Container
-  - type: ItemSlots
-    slots:
-      gun_magazine:
-        startingItem: null
-        whitelist:
-          tags: []
-      gun_chamber:
-        startingItem: MissileWolf
-        whitelist:
-          tags:
-          - MissileLancer
-
-- type: entity
-  parent: WeaponMissileLauncherLancer
-  id: WeaponMissileLauncherLancerEmpty
-  suffix: Пустой, ShuttleGun
-  placement:
-    mode: SnapgridCenter
-  components:
-  - type: ItemSlots
-    slots:
-      gun_magazine:
-        startingItem: null
-        whitelist:
-          tags: []
-      gun_chamber:
-        startingItem: null
-        whitelist:
-          tags:
-          - MissileLancer
+  - type: Battery
+    maxCharge: 20000
+    startingCharge: 20000
+  - type: ExaminableBattery
+  - type: AutoShootGun
+  - type: GunSignalControl
+  - type: WirelessNetworkConnection
+    range: 700
+  - type: DeviceLinkSink
+    ports:
+    - Toggle
+  - type: SpaceArtillery
+    powerChargeRate: 100
+    powerUsePassive: 4000
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 100
+  - type: ProjectileBatteryAmmoProvider
+    proto: BulletWolf
+    fireCost: 20000

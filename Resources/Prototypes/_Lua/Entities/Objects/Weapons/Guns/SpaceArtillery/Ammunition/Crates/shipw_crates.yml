@@ -12,72 +12,6 @@
     sprite: _Lua/Structures/Storage/Crates/sweapon.rsi
 
 - type: entity
-  id: CrateArmoryWeapon20mmAP
-  parent: CrateShipWeaponBase
-  name: ящик бронебойных обойм лёгкого пулемёта (.20мм)
-  description: Содержит 3 обоймы бронебойных снарядов для лёгкого пулемёта (.20мм)
-  components:
-  - type: StorageFill
-    contents:
-      - id: MagazineBox20mmAP
-        amount: 3
-
-- type: entity
-  id: CrateArmoryWeapon53mmAP
-  parent: CrateShipWeaponBase
-  name: ящик бронебойных обойм среднего пулемёта (.53мм)
-  description: Содержит 3 обоймы бронебойных снарядов для среднего пулемёта (.53мм)
-  components:
-  - type: StorageFill
-    contents:
-      - id: MagazineBox53mmAP
-        amount: 3
-
-- type: entity
-  id: CrateArmoryWeapon80mmAP
-  parent: CrateShipWeaponBase
-  name: ящик бронебойных обойм тяжёлого пулемёта (.80мм)
-  description: Содержит 3 обоймы бронебойных снарядов для тяжёлого пулемёта (.80мм)
-  components:
-  - type: StorageFill
-    contents:
-      - id: MagazineBox80mmAP
-        amount: 3
-
-- type: entity
-  id: CrateArmoryWeapon105mmAP
-  parent: CrateShipWeaponBase
-  name: ящик бронебойных картриджей малого миномёта (.105мм)
-  description: Содержит 30 картриджей бронебойных снарядов для малого миномёта (.105мм)
-  components:
-  - type: StorageFill
-    contents:
-      - id: Cartridge105mmAP
-        amount: 30
-
-- type: entity
-  id: CrateArmoryWeapon120mmAP
-  parent: CrateShipWeaponBase
-  name: ящик бронебойных картриджей среднего миномёта (.120мм)
-  description: Содержит 30 картриджей бронебойных снарядов для среднего миномёта (.120мм)
-  components:
-  - type: StorageFill
-    contents:
-      - id: Cartridge120mmAP
-        amount: 30
-
-- type: entity
-  id: CrateArmoryWeapon140mmAP
-  parent: CrateShipWeaponBase
-  name: ящик бронебойных картриджей тяжёлого миномёта (.140мм)
-  description: Содержит 30 картриджей бронебойных снарядов для тяжёлого миномёта (.140мм)
-  components:
-  - type: StorageFill
-    contents:
-      - id: Cartridge140mmAP
-        amount: 30
-
-- type: entity
   id: CrateArmoryWeaponImpulseLaser
   parent: CrateShipWeaponBase
   name: ящик с упакованным импульсным лазером
@@ -89,17 +23,6 @@
         amount: 1
 
 - type: entity
-  id: CrateArmoryPowerCartridgeImpulse
-  parent: CrateShipWeaponBase
-  name: ящик с энергоячейками импульсного лазера
-  description: Содержит 3 энергоячейки импульсного лазера.
-  components:
-  - type: StorageFill
-    contents:
-      - id: PowerCartridgeImpulse
-        amount: 3
-
-- type: entity
   id: CrateArmoryWeaponTeslaTurret
   parent: CrateShipWeaponBase
   name: ящик с упакованной тесла турелью
@@ -109,17 +32,6 @@
     contents:
       - id: TeslaTurretBaseFlatpack
         amount: 1
-
-- type: entity
-  id: CrateArmoryPowerCartridgeTesla
-  parent: CrateShipWeaponBase
-  name: ящик с энергоячейками тесла турели
-  description: Содержит 3 энергоячейки тесла турели.
-  components:
-  - type: StorageFill
-    contents:
-      - id: PowerCartridgeTesla
-        amount: 3
 
 - type: entity
   id: CrateWeaponMissileLauncherStarColosusFlatpack

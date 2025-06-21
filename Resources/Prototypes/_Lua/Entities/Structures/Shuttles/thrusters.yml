@@ -57,37 +57,19 @@
     shape: diamond
 
 - type: entity
-  id: ThrusterPiratesUnanchored
-  parent: ThrusterPirates
-  suffix: Пираты, Закрепленный
-  components:
-    - type: Transform
-      anchored: false
-    - type: Physics
-      bodyType: Dynamic
-
-- type: entity
   id: ThrusterLua
   parent: ThrusterPirates
   name: ракетный двигатель
   suffix: LuaTech, Луа
   components:
+  - type: Machine
+    board: ThrusterLuaMachineCircuitboard
   - type: Sprite
     sprite: _Lua/Structures/Thrusters/thrusterlua.rsi
   - type: Thruster
     damage:
       types:
         Heat: 40
-
-- type: entity
-  id: ThrusterLuaUnanchored
-  parent: ThrusterLua
-  suffix: LuaTech, Луа, Закрепленный
-  components:
-    - type: Transform
-      anchored: false
-    - type: Physics
-      bodyType: Dynamic
 
 - type: entity
   id: ThrusterSyndie
@@ -101,13 +83,3 @@
     damage:
       types:
         Heat: 40
-
-- type: entity
-  id: ThrusterSyndieUnanchored
-  parent: ThrusterSyndie
-  suffix: Синдикат, Закрепленный
-  components:
-    - type: Transform
-      anchored: false
-    - type: Physics
-      bodyType: Dynamic

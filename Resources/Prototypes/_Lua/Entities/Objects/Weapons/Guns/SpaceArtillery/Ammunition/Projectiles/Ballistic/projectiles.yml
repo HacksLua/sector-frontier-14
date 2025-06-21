@@ -20,7 +20,7 @@
       maxIntensity: 1
       maxTileBreak: 1
     - type: RadarBlip
-      scale: 0.35
+      scale: 1
       requireNoGrid: true
       shape: triangle
     - type: TimedDespawn

@@ -32,3 +32,13 @@ zzzz-fmt-power-joules =
         [4] ТДж
        *[5] ???
     }
+
+zzzz-fmt-energy-watt-hours =
+    { TOSTRING($divided, "F1") } { $places ->
+        [0] Вт·ч
+        [1] кВт·ч
+        [2] МВт·ч
+        [3] ГВт·ч
+        [4] ТВт·ч
+        *[5] ???
+        }

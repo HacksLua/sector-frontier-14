@@ -78,3 +78,57 @@
     sprite: _Lua/Flatpack/flatpack.rsi
     layers:
     - state: ship_weapon
+
+- type: entity
+  id: BulletTND
+  name: Инферно
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Lua/Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
+    layers:
+      - state: sam
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    totalIntensity: 200000.0
+    intensitySlope: 5
+    maxIntensity: 100
+  - type: PointLight
+    radius: 3.5
+    color: orange
+    energy: 0.5
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: RadarBlip
+    scale: 3.5
+    requireNoGrid: true
+    radarColor: "#e5ff00"
+    shape: triangle
+  - type: TimedDespawn
+    lifetime: 20
+
+- type: entity
+  id: MissileTND
+  name: ядерная ракета класса "Инферно"
+  suffix: Missile
+  parent: BaseMissile
+  components:
+    - type: Sprite
+      sprite: _Lua/Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
+      state: tnd
+    - type: Tag
+      tags:
+        - MissileStarColosus
+    - type: CartridgeAmmo
+      deleteOnSpawn: true
+      proto: BulletTND

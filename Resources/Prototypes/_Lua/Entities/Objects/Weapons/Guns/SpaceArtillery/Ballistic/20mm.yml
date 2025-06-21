@@ -4,10 +4,10 @@
 
 - type: entity
   parent: BaseWeaponNavalBallisctic
-  id: Weapon20mmBase
+  id: Weapon20mm
   name: Пулемёт "20мм"
   description: Лёгий пулемёт, использует снаряды 20мм.
-  suffix: НЕ МАППИТЬ!, ShuttleGun
+  suffix: ShuttleGun
   placement:
     mode: SnapgridCenter
   components:
@@ -19,16 +19,31 @@
       drawdepth: Mobs
       layers:
         - state: turrets20mm
-    - type: ItemSlots
-      slots:
-        gun_magazine:
-          whitelist:
-            tags:
-              - Magazine20mm
-        gun_chamber:
-          whitelist:
-            tags:
-              - Cartridge20mm
+    - type: ContainerContainer
+      containers:
+        machine_board: !type:Container
+        machine_parts: !type:Container
+    - type: Battery
+      maxCharge: 5000
+      startingCharge: 5000
+    - type: ExaminableBattery
+    - type: AutoShootGun
+    - type: GunSignalControl
+    - type: WirelessNetworkConnection
+      range: 700
+    - type: DeviceLinkSink
+      ports:
+      - Toggle
+    - type: SpaceArtillery
+      powerChargeRate: 100
+      powerUseActive: 20
+      powerUsePassive: 1100
+    - type: BatterySelfRecharger
+      autoRecharge: true
+      autoRechargeRate: 100
+    - type: ProjectileBatteryAmmoProvider
+      proto: Bullet20mm
+      fireCost: 50
     - type: Gun
       fireRate: 10
       projectileSpeed: 60
@@ -36,17 +51,9 @@
       availableModes:
         - FullAuto
       soundGunshot: /Audio/Weapons/Guns/Gunshots/gun_sentry.ogg
-    - type: ChamberMagazineAmmoProvider
-      boltClosed: null
-    - type: ContainerContainer
-      containers:
-        gun_magazine: !type:ContainerSlot
-        gun_chamber: !type:ContainerSlot
-        machine_board: !type:Container
-        machine_parts: !type:Container
 
 - type: entity
-  parent: [BaseWeaponNavalBallisctic, Weapon20mmBase]
+  parent: [BaseWeaponNavalBallisctic, Weapon20mm]
   id: Weapon20mmPD
   name: Пулемёт Д "20мм"
   description: Это автоматическое оружие, предназначенное для защиты ключевых объектов или зон от близкорасположенных целей.
@@ -58,16 +65,10 @@
   - type: NpcFactionMember
     factions:
     - PointDefenseGun
-  - type: BallisticAmmoProvider
-    proto: Cartridge20mm
-    capacity: 1500
   - type: ContainerContainer
     containers:
-      gun_magazine: !type:ContainerSlot
-      gun_chamber: !type:ContainerSlot
       machine_board: !type:Container
       machine_parts: !type:Container
-      ballistic-ammo: !type:Container
   - type: Gun
     fireRate: 14
     projectileSpeed: 60
@@ -90,47 +91,13 @@
         100.0
 
 - type: entity
-  parent: Weapon20mmBase
-  id: Weapon20mm
-  suffix: НЕ МАППИТЬ!, Полный, ShuttleGun
-  placement:
-    mode: SnapgridCenter
-  components:
-    - type: ItemSlots
-      slots:
-        gun_magazine:
-          startingItem: MagazineBox20mmAP
-          whitelist:
-            tags:
-              - Magazine20mm
-        gun_chamber:
-          startingItem: Cartridge20mmAP
-          whitelist:
-            tags:
-              - Cartridge20mm
-
-- type: entity
-  parent: [BaseStructureDisableToolUse, Weapon20mm, Weapon20mmBase ]
-  id: Weapon20mmUnanchor
-  suffix: Полный, Неоткрепляемый для кораблей, ShuttleGun
-  placement:
-    mode: SnapgridCenter
-
-- type: entity
-  parent: [BaseStructureDisableToolUse, Weapon20mmBase]
-  id: Weapon20mmUnanchorEmpty
-  suffix: Пустой, Неоткрепляемый для кораблей, ShuttleGun
-  placement:
-    mode: SnapgridCenter
-
-- type: entity
   parent: BaseNFFlatpack
   id: Weapon20mmBaseFlatpack
   name: упакованный лёгкий пулемёт
   description: Упакованный Лёгкий Пулемёт (.20мм)
   components:
   - type: Flatpack
-    entity: Weapon20mmBase
+    entity: Weapon20mm
   - type: StaticPrice
     price: 250
   - type: Sprite

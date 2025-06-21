@@ -4,10 +4,10 @@
 
 - type: entity
   parent: BaseWeaponNavalBallisctic
-  id: Weapon120mmBase
+  id: Weapon120mm
   name: Миномёт "120мм"
   description: Средний миномёт, использует снаряды 120мм.
-  suffix: НЕ МАППИТЬ!, ShuttleGun
+  suffix: ShuttleGun
   placement:
     mode: SnapgridCenter
   components:
@@ -19,63 +19,38 @@
       drawdepth: Mobs
       layers:
         - state: turrets120mm
-    - type: ItemSlots
-      slots:
-        gun_magazine:
-          whitelist:
-            tags: []
-        gun_chamber:
-          whitelist:
-            tags: []
-    - type: BallisticAmmoProvider
-      whitelist:
-        tags:
-          - Cartridge120mm
-      capacity: 2
+    - type: ContainerContainer
+      containers:
+        machine_board: !type:Container
+        machine_parts: !type:Container
     - type: Gun
-      fireRate: 0.05
+      fireRate: 20
       projectileSpeed: 80
       selectedMode: FullAuto
       availableModes:
         - FullAuto
       soundGunshot: /Audio/Weapons/Guns/Gunshots/gun_sentry.ogg
-    - type: ChamberMagazineAmmoProvider
-      boltClosed: null
-    - type: ContainerContainer
-      containers:
-        gun_magazine: !type:ContainerSlot
-        gun_chamber: !type:ContainerSlot
-        machine_board: !type:Container
-        machine_parts: !type:Container
-        ballistic-ammo: !type:Container
-
-- type: entity
-  parent: Weapon120mmBase
-  id: Weapon120mm
-  suffix: НЕ МАППИТЬ!, Полный, ShuttleGun
-  placement:
-    mode: SnapgridCenter
-  components:
-    - type: BallisticAmmoProvider
-      whitelist:
-        tags:
-          - Cartridge120mm
-      proto: Cartridge120mm
-      capacity: 2
-
-- type: entity
-  parent: [BaseStructureDisableToolUse, Weapon120mm, Weapon120mmBase]
-  id: Weapon120mmUnanchor
-  suffix: Полный, Неоткрепляемый для кораблей, ShuttleGun
-  placement:
-    mode: SnapgridCenter
-
-- type: entity
-  parent: [BaseStructureDisableToolUse, Weapon120mmBase]
-  id: Weapon120mmUnanchorEmpty
-  suffix: Пустой, Неоткрепляемый для кораблей, ShuttleGun
-  placement:
-    mode: SnapgridCenter
+    - type: Battery
+      maxCharge: 300
+      startingCharge: 300
+    - type: ExaminableBattery
+    - type: AutoShootGun
+    - type: GunSignalControl
+    - type: WirelessNetworkConnection
+      range: 700
+    - type: DeviceLinkSink
+      ports:
+      - Toggle
+    - type: SpaceArtillery
+      powerChargeRate: 30
+      powerUseActive: 1
+      powerUsePassive: 1100
+    - type: BatterySelfRecharger
+      autoRecharge: true
+      autoRechargeRate: 30
+    - type: ProjectileBatteryAmmoProvider
+      proto: Bullet120mm
+      fireCost: 150
 
 - type: entity
   parent: BaseNFFlatpack
@@ -84,7 +59,7 @@
   description: Упакованный Средний Миномёт (.120мм)
   components:
   - type: Flatpack
-    entity: Weapon120mmBase
+    entity: Weapon120mm
   - type: StaticPrice
     price: 250
   - type: Sprite

@@ -5,7 +5,7 @@
 - type: vessel
   id: Arkalis
   parent: BaseVessel
-  name: LT Аркалис
+  name: Аркалис
   description: Списанный крупный военный корабль переоборудованный под гражданские нужды.
   price: 280000
   category: Large
@@ -19,7 +19,7 @@
 
 - type: gameMap
   id: Arkalis
-  mapName: 'LT Аркалис'
+  mapName: 'Аркалис'
   mapPath: /Maps/_Lua/Shuttles/Expedition/arkalis.yml
   minPlayers: 0
   stations:
@@ -29,5 +29,5 @@
         - type: StationNameSetup
           mapNameTemplate: 'Аркалис {1}'
           nameGenerator:
-            !type:NanotrasenNameGenerator
+            !type:LuaTechNameGenerator
             prefixCreator: '14'

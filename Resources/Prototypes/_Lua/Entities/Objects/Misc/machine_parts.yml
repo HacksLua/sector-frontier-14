@@ -1,0 +1,80 @@
+# Rating 5
+
+- type: entity
+  id: PurCapacitorStockPart
+  name: purspace capacitor
+  parent: CapacitorStockPart
+  description: A purspace capacitor used in the construction of a variety of devices.
+  suffix: Rating 5
+  components:
+    - type: Sprite
+      sprite: _Lua/Objects/Misc/stock_parts.rsi
+      state: pur_capacitor
+    - type: MachinePart
+      part: Capacitor
+      rating: 5
+    - type: Stack
+      stackType: PurCapacitor
+    - type: Tag
+      tags:
+      - PurspaceCapacitor
+      - CapacitorStockPart
+
+- type: entity
+  id: PurManipulatorStockPart
+  name: purspace manipulator
+  parent: MicroManipulatorStockPart
+  description: A purspace manipulator used in the construction of a variety of devices.
+  suffix: Rating 5
+  components:
+    - type: Sprite
+      sprite: _Lua/Objects/Misc/stock_parts.rsi
+      state: pur_mani
+    - type: MachinePart
+      part: Manipulator
+      rating: 5
+    - type: Stack
+      stackType: PurManipulator
+    - type: Tag
+      tags:
+      - PurspaceManupulator
+
+- type: entity
+  id: PurMatterBinStockPart
+  name: purspace matter bin
+  parent: MatterBinStockPart
+  description: A purspace matter bin used in the construction of a variety of devices.
+  suffix: Rating 5
+  components:
+    - type: Sprite
+      sprite: _Lua/Objects/Misc/stock_parts.rsi
+      state: pur_matter_bin
+    - type: MachinePart
+      part: MatterBin
+      rating: 5
+    - type: Stack
+      stackType: PurMatterBin
+    - type: Tag
+      tags:
+      - PurspaceMatterbin
+
+- type: stack
+  id: PurCapacitor
+  name: stack-purspace-capacitor
+  icon: { sprite: _Lua/Objects/Misc/stock_parts.rsi, state: pur_capacitor }
+  spawn: PurCapacitorStockPart
+  maxCount: 10
+
+- type: stack
+  id: PurManipulator
+  name: stack-purspace-manipulator
+  icon: { sprite: _Lua/Objects/Misc/stock_parts.rsi, state: pur_mani }
+  spawn: PurManipulatorStockPart
+  maxCount: 10
+
+- type: stack
+  id: PurMatterBin
+  name: stack-purspace-matter-bin
+  icon: { sprite: _Lua/Objects/Misc/stock_parts.rsi, state: pur_matter_bin }
+  spawn: PurMatterBinStockPart
+  maxCount: 10

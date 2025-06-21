@@ -5,14 +5,13 @@
 - type: vessel
   parent: BaseVessel
   id: Ayhiva
-  name: LT Айхива
+  name: Айхива
   description: Боевой корабль созданный для длительных боев корпорацией LuaTech.
-  price: 142000
+  price: 145270
   category: Medium
   group: Mercenary
   shuttlePath: /Maps/_Lua/Shuttles/Mercenary/ayhiva.yml
   addComponents:
-
     - type: IFF
       color: "#182faf"
     - type: NanotrasenFtl
@@ -21,7 +20,7 @@
 
 - type: gameMap
   id: Ayhiva
-  mapName: 'LT Айхива'
+  mapName: 'Айхива'
   mapPath: /Maps/_Lua/Shuttles/Mercenary/ayhiva.yml
   minPlayers: 0
   stations:
@@ -29,7 +28,7 @@
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'LT Айхива {1}'
+          mapNameTemplate: 'Айхива {1}'
           nameGenerator:
-            !type:NanotrasenNameGenerator
+            !type:LuaTechNameGenerator
             prefixCreator: '14'

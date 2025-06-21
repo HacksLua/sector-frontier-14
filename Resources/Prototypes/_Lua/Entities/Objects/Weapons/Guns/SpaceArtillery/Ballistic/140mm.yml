@@ -4,10 +4,10 @@
 
 - type: entity
   parent: BaseWeaponNavalBallisctic
-  id: Weapon140mmBase
+  id: Weapon140mm
   name: Миномёт "140мм"
   description: Тяжёлый миномёт, использует снаряды 140мм.
-  suffix: НЕ МАППИТЬ!, ShuttleGun
+  suffix: ShuttleGun
   placement:
     mode: SnapgridCenter
   components:
@@ -19,62 +19,38 @@
       drawdepth: Mobs
       layers:
         - state: turrets140mm
-    - type: ItemSlots
-      slots:
-        gun_magazine:
-          whitelist:
-            tags: []
-        gun_chamber:
-          whitelist:
-            tags:
-              - Cartridge140mm
+    - type: ContainerContainer
+      containers:
+        machine_board: !type:Container
+        machine_parts: !type:Container
     - type: Gun
-      fireRate: 0.01
+      fireRate: 1
       projectileSpeed: 80
       selectedMode: FullAuto
       availableModes:
         - FullAuto
       soundGunshot: /Audio/Weapons/Guns/Gunshots/gun_sentry.ogg
-    - type: ChamberMagazineAmmoProvider
-      boltClosed: null
-    - type: ContainerContainer
-      containers:
-        gun_magazine: !type:ContainerSlot
-        gun_chamber: !type:ContainerSlot
-        machine_board: !type:Container
-        machine_parts: !type:Container
-
-- type: entity
-  parent: Weapon140mmBase
-  id: Weapon140mm
-  suffix: НЕ МАППИТЬ!, Полный, ShuttleGun
-  placement:
-    mode: SnapgridCenter
-  components:
-    - type: ItemSlots
-      slots:
-        gun_magazine:
-          whitelist:
-            tags: []
-        gun_chamber:
-          startingItem: Cartridge140mm
-          whitelist:
-            tags:
-              - Cartridge140mm
-
-- type: entity
-  parent: [BaseStructureDisableToolUse, Weapon140mm, Weapon140mmBase]
-  id: Weapon140mmUnanchor
-  suffix: Полный, Неоткрепляемый для кораблей, ShuttleGun
-  placement:
-    mode: SnapgridCenter
-
-- type: entity
-  parent: [BaseStructureDisableToolUse, Weapon140mmBase]
-  id: Weapon140mmUnanchorEmpty
-  suffix: Пустой, Неоткрепляемый для кораблей, ShuttleGun
-  placement:
-    mode: SnapgridCenter
+    - type: Battery
+      maxCharge: 151
+      startingCharge: 151
+    - type: ExaminableBattery
+    - type: AutoShootGun
+    - type: GunSignalControl
+    - type: WirelessNetworkConnection
+      range: 700
+    - type: DeviceLinkSink
+      ports:
+      - Toggle
+    - type: SpaceArtillery
+      powerChargeRate: 20
+      powerUseActive: 1
+      powerUsePassive: 1100
+    - type: BatterySelfRecharger
+      autoRecharge: true
+      autoRechargeRate: 20
+    - type: ProjectileBatteryAmmoProvider
+      proto: Bullet140mm
+      fireCost: 150
 
 - type: entity
   parent: BaseNFFlatpack
@@ -83,7 +59,7 @@
   description: Упакованный Тяжёлый Миномёт (.140мм)
   components:
   - type: Flatpack
-    entity: Weapon140mmBase
+    entity: Weapon140mm
   - type: StaticPrice
     price: 250
   - type: Sprite

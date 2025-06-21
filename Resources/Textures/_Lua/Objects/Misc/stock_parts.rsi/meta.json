@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from https://github.com/tgstation/tgstation at 0d9c9a8233dfc3fc55edc538955a761a6328bee0, micro_mani by EmoGarbage404 (github)",
+  "states": [
+    {
+      "name": "pur_matter_bin",
+      "delays": [
+        [
+          0.3,
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "pur_mani",
+      "delays": [
+        [
+          0.3,
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "pur_capacitor",
+      "delays": [
+        [
+          0.3,
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    }
+  ]
+}

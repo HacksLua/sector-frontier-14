@@ -7,7 +7,7 @@
   id: WeaponMissileLauncherNightHunter
   name: Артиллерийская установка "Ночной Хищник"
   description: Компактная установка, предназначенная для маневренных космических боев. Снаряд "Томагавк" с легкостью пробивает броню врага, оставляя лишь обломки.
-  suffix: НЕ МАППИТЬ!, ShuttleGun
+  suffix: ShuttleGun
   placement:
     mode: SnapgridCenter
   components:
@@ -20,46 +20,33 @@
     layers:
       - state: space_artillery
   - type: Gun
+    fireRate: 2
     projectileSpeed: 40
     selectedMode: FullAuto
     availableModes:
       - FullAuto
     soundGunshot: /Audio/Weapons/Guns/Gunshots/gun_sentry.ogg
-  - type: ChamberMagazineAmmoProvider
-    boltClosed: null
   - type: ContainerContainer
     containers:
-      gun_magazine: !type:ContainerSlot
-      gun_chamber: !type:ContainerSlot
       machine_board: !type:Container
       machine_parts: !type:Container
-  - type: ItemSlots
-    slots:
-      gun_magazine:
-        startingItem: null
-        whitelist:
-          tags: []
-      gun_chamber:
-        startingItem: MissileTomahawk
-        whitelist:
-          tags:
-          - MissileNightHunter
-
-- type: entity
-  parent: WeaponMissileLauncherNightHunter
-  id: WeaponMissileLauncherNightHunterEmpty
-  suffix: Пустой, ShuttleGun
-  placement:
-    mode: SnapgridCenter
-  components:
-  - type: ItemSlots
-    slots:
-      gun_magazine:
-        startingItem: null
-        whitelist:
-          tags: []
-      gun_chamber:
-        startingItem: null
-        whitelist:
-          tags:
-          - MissileNightHunter
+  - type: Battery
+    maxCharge: 20000
+    startingCharge: 20000
+  - type: ExaminableBattery
+  - type: AutoShootGun
+  - type: GunSignalControl
+  - type: WirelessNetworkConnection
+    range: 700
+  - type: DeviceLinkSink
+    ports:
+    - Toggle
+  - type: SpaceArtillery
+    powerChargeRate: 100
+    powerUsePassive: 2000
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 100
+  - type: ProjectileBatteryAmmoProvider
+    proto: BulletTomahawk
+    fireCost: 7000

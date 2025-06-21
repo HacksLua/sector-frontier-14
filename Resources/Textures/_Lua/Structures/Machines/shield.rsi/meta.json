@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Made by _starch_ (discord) for Monolith, resprite and additional HacksLua (discord)",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "control"
+    },
+	{
+		"name": "activated",
+		"delays": [
+			[
+				0.1,
+				0.1,
+				0.1,
+				0.1
+			]
+		]
+	},
+	{
+		"name": "idle",
+		"delays": [
+			[
+				0.1,
+				0.1,
+				0.1,
+				0.1,
+				0.1,
+				0.1,
+				0.1
+			]
+		]
+	}
+  ]
+}

@@ -1,0 +1,33 @@
+- type: entity
+  id: CircularShieldLua
+  name: PLT генератор щита
+  parent: [BaseStructureDisableToolUse, CircularShieldBase, BaseStructure]
+  suffix: Lua, Theta, CircularShield
+  components:
+    - type: Machine
+      board: MachineShieldPLTCircuitboard
+    - type: CircularShield
+      consumptionPerM2: 0.05
+      maxWidth: 360
+      maxRadius: 150
+      color: "#a200ff"
+      effects:
+        - !type:CircularShieldTempSpeedChangeEffect
+          speedModifier: 0.1
+      projectileWattPerImpact: 8
+      damageSurgeDuration: 8
+    - type: Sprite
+      sprite: _Lua/Structures/Machines/shield.rsi
+      snapCardinals: true
+      layers:
+      - state: control
+      - state: idle
+        shader: unshaded
+      - state: activated
+        map: [ "enum.PowerDeviceVisualLayers.Powered" ]
+        shader: unshaded
+    - type: PointLight
+      enabled: false
+      color: "#a200ff"
+      radius: 2.0
+      energy: 1.5

@@ -43,32 +43,12 @@
   group: market
 
 - type: cargoProduct
-  id: CargoCrateArmoryPowerCartridgeImpulse
-  icon:
-    sprite: _Lua/Structures/Storage/Crates/sweapon.rsi
-    state: icon
-  product: CrateArmoryPowerCartridgeImpulse
-  cost: 35000
-  category: Корабельное вооружение
-  group: market
-
-- type: cargoProduct
   id: CargoCrateArmoryWeaponTeslaTurret
   icon:
     sprite: _Lua/Structures/Storage/Crates/sweapon.rsi
     state: icon
   product: CrateArmoryWeaponTeslaTurret
   cost: 110000
-  category: Корабельное вооружение
-  group: market
-
-- type: cargoProduct
-  id: CargoCrateArmoryPowerCartridgeTesla
-  icon:
-    sprite: _Lua/Structures/Storage/Crates/sweapon.rsi
-    state: icon
-  product: CrateArmoryPowerCartridgeTesla
-  cost: 35000
   category: Корабельное вооружение
   group: market
 
@@ -149,65 +129,5 @@
     state: icon
   product: CrateArmoryWeapon20mmBase
   cost: 35000
-  category: Корабельное вооружение
-  group: market
-
-- type: cargoProduct
-  id: CargoCrateArmoryWeapon140mmAP
-  icon:
-    sprite: _Lua/Structures/Storage/Crates/sweapon.rsi
-    state: icon
-  product: CrateArmoryWeapon140mmAP
-  cost: 15000
-  category: Корабельное вооружение
-  group: market
-
-- type: cargoProduct
-  id: CargoCrateArmoryWeapon120mmAP
-  icon:
-    sprite: _Lua/Structures/Storage/Crates/sweapon.rsi
-    state: icon
-  product: CrateArmoryWeapon120mmAP
-  cost: 14000
-  category: Корабельное вооружение
-  group: market
-
-- type: cargoProduct
-  id: CargoCrateArmoryWeapon105mmAP
-  icon:
-    sprite: _Lua/Structures/Storage/Crates/sweapon.rsi
-    state: icon
-  product: CrateArmoryWeapon105mmAP
-  cost: 13000
-  category: Корабельное вооружение
-  group: market
-
-- type: cargoProduct
-  id: CargoCrateArmoryWeapon80mmAP
-  icon:
-    sprite: _Lua/Structures/Storage/Crates/sweapon.rsi
-    state: icon
-  product: CrateArmoryWeapon80mmAP
-  cost: 25000
-  category: Корабельное вооружение
-  group: market
-
-- type: cargoProduct
-  id: CargoCrateArmoryWeapon53mmAP
-  icon:
-    sprite: _Lua/Structures/Storage/Crates/sweapon.rsi
-    state: icon
-  product: CrateArmoryWeapon53mmAP
-  cost: 20000
-  category: Корабельное вооружение
-  group: market
-
-- type: cargoProduct
-  id: CargoCrateArmoryWeapon20mmAP
-  icon:
-    sprite: _Lua/Structures/Storage/Crates/sweapon.rsi
-    state: icon
-  product: CrateArmoryWeapon20mmAP
-  cost: 19000
   category: Корабельное вооружение
   group: market

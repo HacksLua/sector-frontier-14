@@ -19,4 +19,5 @@
       NecroGland: 100
   - type: Stack
     stackType: NecroGland
+    count: 1
   - type: Material

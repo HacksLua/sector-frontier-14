@@ -995,24 +995,6 @@
       whitelist:
         - MercenaryBase
 
-- type: listing
-  id: UplinkMercenaryMagazineBox20mm
-  name: обойма фугасных снарядов .20мм
-  description: обойма фугасных снарядов .20мм
-  productEntity: MagazineBox20mm
-  cost:
-    Speso: 10000
-  categories:
-    - UplinkMercenaryShipWeapons
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - MercenaryUplink
-    - !type:BuyerJobCondition
-      whitelist:
-        - MercenaryBase
-
 #Ховербайк
 - type: listing
   id: UplinkMercenaryHoverbikeSyndicateFlatpack

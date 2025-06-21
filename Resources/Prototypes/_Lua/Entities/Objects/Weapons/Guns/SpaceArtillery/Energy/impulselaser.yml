@@ -7,7 +7,7 @@
   id: ImpulseLaserBase
   name: Импульсный Лазер
   description: Лёгий лазер, использует для питания энергоячейки импульсного лазера.
-  suffix: НЕ МАППИТЬ!, ShuttleGun
+  suffix: ShuttleGun
   placement:
     mode: SnapgridCenter
   components:
@@ -16,21 +16,8 @@
       scale: 1
     - type: ContainerContainer
       containers:
-        gun_magazine: !type:ContainerSlot
         machine_board: !type:Container
         machine_parts: !type:Container
-    - type: ItemSlots
-      slots:
-        gun_magazine:
-          name: Magazine
-          insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
-          ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
-          whitelist:
-            tags:
-              - PowerCartridgeImpulse
-    - type: MagazineAmmoProvider
-    - type: ChamberMagazineAmmoProvider
-      boltClosed: null
     - type: Sprite
       sprite: _Lua/Objects/Weapons/Guns/Turrets/impulselaser.rsi
       drawdepth: Mobs
@@ -53,17 +40,38 @@
           Base: impulselaser
           BaseUnshaded: impulselaser
     - type: Gun
-      fireRate: 2
+      fireRate: 4
       projectileSpeed: 110
       selectedMode: FullAuto
       availableModes:
         - FullAuto
       soundGunshot: /Audio/_Lua/Weapons/Guns/Gunshots/lasergatling.ogg
+    - type: Battery
+      maxCharge: 4500
+      startingCharge: 4500
+    - type: ExaminableBattery
+    - type: AutoShootGun
+    - type: GunSignalControl
+    - type: WirelessNetworkConnection
+      range: 700
+    - type: DeviceLinkSink
+      ports:
+      - Toggle
+    - type: SpaceArtillery
+      powerChargeRate: 50
+      powerUseActive: 50
+      powerUsePassive: 3100
+    - type: BatterySelfRecharger
+      autoRecharge: true
+      autoRechargeRate: 50
+    - type: ProjectileBatteryAmmoProvider
+      proto: BulletMachineGunImpulseTurret
+      fireCost: 150
 
 - type: entity
   parent: [BaseStructureDisableToolUse, ImpulseLaserBase]
   id: ImpulseLaserUnanchor
-  suffix: Неоткрепляемый для кораблей, ShuttleGun
+  suffix: Неоткрепляемый, ShuttleGun
   placement:
     mode: SnapgridCenter
 

@@ -1,0 +1,79 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: entity
+  id: BulletGR
+  name: Анаконда
+  parent: BaseBulletMissile
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    layers:
+      - state: sam
+  - type: Explosive
+    explosionType: DemolitionCharge
+    totalIntensity: 100000.0
+    intensitySlope: 500
+    maxIntensity: 500
+    maxTileBreak: 1
+  - type: RadarBlip
+    scale: 1.5
+    requireNoGrid: true
+    shape: triangle
+  - type: TimedDespawn
+    lifetime: 20
+
+- type: entity
+  id: BulletWolf
+  name: Копьё
+  parent: BaseBulletMissile
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    layers:
+      - state: sam
+  - type: Explosive
+    explosionType: Default
+    totalIntensity: 25000.0
+    intensitySlope: 500
+    maxIntensity: 100
+    maxTileBreak: 1
+  - type: RadarBlip
+    scale: 1.5
+    requireNoGrid: true
+    shape: triangle
+  - type: TimedDespawn
+    lifetime: 20
+
+- type: entity
+  id: BulletTomahawk
+  name: Томагавк
+  parent: BaseBulletMissile
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    layers:
+    - state: sdm
+  - type: Explosive
+    explosionType: DemolitionCharge
+    totalIntensity: 500.0
+    intensitySlope: 50
+    maxIntensity: 100
+    maxTileBreak: 1
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: RadarBlip
+    scale: 1.5
+    requireNoGrid: true
+    shape: triangle
+  - type: TimedDespawn
+    lifetime: 20
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]

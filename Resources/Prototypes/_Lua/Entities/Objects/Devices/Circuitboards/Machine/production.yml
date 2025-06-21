@@ -21,3 +21,40 @@
           defaultPrototype: Beaker
     - type: StealTarget
       stealGroup: MedipenTechFabCircuitboard
+
+- type: entity
+  id: ThrusterLuaMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: thruster luatech machine board
+  components:
+  - type: Sprite
+    sprite: _Lua/Objects/Misc/module.rsi
+    state: ltthruster
+  - type: MachineBoard
+    prototype: ThrusterLua
+    stackRequirements:
+      Plasteel: 5
+      PurCapacitor: 4
+
+- type: entity
+  id: MachineShieldPLTCircuitboard
+  parent: BaseMachineCircuitboard
+  name: PLT shield generator board
+  description: A machine board for a shield generator.
+  components:
+  - type: Sprite
+    sprite: _Lua/Objects/Misc/module.rsi
+    state: ltshieldgen
+  - type: MachineBoard
+    prototype: CircularShieldLua
+    componentRequirements:
+      AmeFuelContainer:
+        amount: 2
+        defaultPrototype: AmeJar
+    stackRequirements:
+      Glass: 10
+      Uranium: 10
+      Plasma: 30
+      Plasteel: 10
+      PurCapacitor: 4
+      PurMatterBin: 2
