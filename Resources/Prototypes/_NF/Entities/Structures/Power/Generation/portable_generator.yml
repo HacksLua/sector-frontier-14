@@ -3,6 +3,7 @@
   id: BaseGeneratorShuttle
   abstract: true
   components:
+  - type: Climbable
   - type: Transform
     anchored: true
   - type: Physics
