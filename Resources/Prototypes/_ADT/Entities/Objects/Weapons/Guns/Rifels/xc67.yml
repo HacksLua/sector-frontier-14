@@ -35,7 +35,7 @@
         priority: 2
         whitelist:
           tags:
-            - MagazineRifle
+            - NFMagazineRifle20
             - ADTExtMagazineRifle
       gun_chamber:
         name: Chamber
@@ -43,7 +43,7 @@
         priority: 1
         whitelist:
           tags:
-            - CartridgeRifle
+            - NFCartridgeRifle20
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot

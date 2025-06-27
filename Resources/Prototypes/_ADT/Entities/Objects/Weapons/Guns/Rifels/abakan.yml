@@ -31,11 +31,11 @@
             - NFMagazineRifle30
       gun_chamber:
         name: Chamber
-        startingItem: NFCartridgeRifle20
+        startingItem: NFCartridgeRifle30
         priority: 1
         whitelist:
           tags:
-            - NFCartridgeRifle20
+            - NFCartridgeRifle30
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot
@@ -93,11 +93,11 @@
             - NFMagazineRifle30
       gun_chamber:
         name: Chamber
-        startingItem: NFCartridgeRifle20
+        startingItem: NFCartridgeRifle30
         priority: 1
         whitelist:
           tags:
-            - NFCartridgeRifle20
+            - NFCartridgeRifle30
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot

@@ -14,7 +14,7 @@
     mayTransfer: true
     whitelist:
       tags:
-        - CartridgeRifle
+        - NFCartridgeRifle20
     capacity: 45
   - type: ContainerContainer
     containers:

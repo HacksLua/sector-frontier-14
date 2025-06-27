@@ -35,7 +35,7 @@
     deleteOnSpawn: true
     proto: NFBulletWeakRocket
   - type: Sprite
-    state: frag
+    state: rpg
 
 - type: entity
   parent: NFBaseCartridgeRocket
