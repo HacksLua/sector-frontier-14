@@ -22,7 +22,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 600
+        damage: 3000 # Lua 600<3000
       behaviors:
       - !type:DoActsBehavior
         acts: ["Destruction"]
@@ -31,7 +31,7 @@
           collection: MetalSlam
     - trigger:
         !type:DamageTrigger
-        damage: 400
+        damage: 1500 # Lua 400<1500
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -85,7 +85,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 400
+        damage: 2500 # Lua 400<2500
       behaviors:
       - !type:DoActsBehavior
         acts: ["Destruction"]
@@ -94,7 +94,7 @@
           collection: MetalSlam
     - trigger:
         !type:DamageTrigger
-        damage: 200
+        damage: 1500 # Lua 200<1500
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -190,7 +190,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 150 #excess damage (nuke?). avoid computational cost of spawning entities.
+        damage: 1500 # Lua 150<1500
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]

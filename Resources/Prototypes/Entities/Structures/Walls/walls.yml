@@ -70,7 +70,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 300
+        damage: 1200 # Lua 300<1200
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawn:
@@ -103,7 +103,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 300
+        damage: 1200 # Lua 300<1200
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawn:
@@ -145,7 +145,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 300
+        damage: 1200 # Lua 300<1200
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawn:
@@ -179,7 +179,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 100 # weak
+        damage: 1200 # Lua 100<400
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawn:
@@ -208,7 +208,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 300
+        damage: 1200 # Lua 300<1200
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawn:
@@ -239,7 +239,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 300
+        damage: 1200 # Lua 300<1200
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawn:
@@ -272,7 +272,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 300
+        damage: 1200 # Lua 300<1200
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawn:
@@ -308,7 +308,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 300
+        damage: 1200 # Lua 300<1200
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -346,7 +346,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 300
+        damage: 1200 # Lua 300<1200
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawn:
@@ -382,7 +382,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 300
+        damage: 1200 # Lua 300<1200
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -429,7 +429,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 300
+        damage: 1200 # Lua 300<1200
       behaviors:
       - !type:DoActsBehavior
         acts: ["Destruction"]
@@ -438,7 +438,7 @@
           collection: MetalSlam
     - trigger:
         !type:DamageTrigger
-        damage: 150
+        damage: 600 # Lua 300<1200
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -486,7 +486,7 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 1000
+            damage: 7500 # Lua 1200<7500
           behaviors:
             - !type:SpawnEntitiesBehavior
               spawn:
@@ -521,7 +521,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 2000
+        damage: 3500 # Lua 2000<3500
       behaviors:
         - !type:DoActsBehavior
           acts: [ "Destruction" ]
@@ -530,7 +530,7 @@
             collection: MetalSlam
     - trigger:
         !type:DamageTrigger
-        damage: 1000
+        damage: 2000 # Lua 1200<2000
       behaviors:
       - !type:ChangeConstructionNodeBehavior
         node: girder
@@ -612,7 +612,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 600
+        damage: 3000 # Lua 600<3000
       behaviors:
       - !type:DoActsBehavior
         acts: ["Destruction"]
@@ -621,7 +621,7 @@
           collection: MetalSlam
     - trigger:
         !type:DamageTrigger
-        damage: 400
+        damage: 2000 # Lua 400<2000
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -679,7 +679,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 500
+        damage: 2500 # Lua 500<2500
       behaviors:
       - !type:DoActsBehavior
         acts: ["Destruction"]
@@ -688,7 +688,7 @@
           collection: MetalSlam
     - trigger:
         !type:DamageTrigger
-        damage: 350
+        damage: 1750 # Lua 350<1750
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -744,7 +744,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 1000
+        damage: 5000 # Lua 1000<5000
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawn:
@@ -783,7 +783,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 300
+        damage: 1000 # Lua 300<1000
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawn:
@@ -819,7 +819,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 300
+        damage: 1200 # Lua 300<1200
       behaviors:
       - !type:DoActsBehavior
         acts: ["Destruction"]
@@ -828,7 +828,7 @@
           collection: MetalSlam
     - trigger:
         !type:DamageTrigger
-        damage: 150
+        damage: 600 # Lua 150<600
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -900,7 +900,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 600
+        damage: 3600 # Lua 600<3600
       behaviors:
         - !type:DoActsBehavior
           acts: [ "Destruction" ]
@@ -909,7 +909,7 @@
             collection: MetalSlam
     - trigger:
         !type:DamageTrigger
-        damage: 300
+        damage: 1800 # Lua 300<1800
       behaviors:
       - !type:ChangeConstructionNodeBehavior
         node: girder
@@ -938,7 +938,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 600
+        damage: 3600 # Lua 600<3600
       behaviors:
       - !type:DoActsBehavior
         acts: ["Destruction"]
@@ -947,7 +947,7 @@
           collection: MetalSlam
     - trigger:
         !type:DamageTrigger
-        damage: 400
+        damage: 2400 # Lua 400<2400
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -1014,7 +1014,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 400
+        damage: 1600 # Lua 400<1600
       behaviors:
       - !type:DoActsBehavior
         acts: ["Destruction"]
@@ -1023,7 +1023,7 @@
           collection: MetalSlam
     - trigger:
         !type:DamageTrigger
-        damage: 200
+        damage: 800 # Lua 200<800
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -1078,7 +1078,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 300
+        damage: 1200 # Lua 300<1200
       behaviors:
       - !type:DoActsBehavior
         acts: ["Destruction"]
@@ -1087,7 +1087,7 @@
           collection: MetalSlam
     - trigger:
         !type:DamageTrigger
-        damage: 150
+        damage: 600 # Lua 150<600
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -1113,7 +1113,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 300
+        damage: 3000 # Lua 300<3000
       behaviors:
       - !type:DoActsBehavior
         acts: ["Destruction"]
@@ -1122,7 +1122,7 @@
           collection: MetalSlam
     - trigger:
         !type:DamageTrigger
-        damage: 150
+        damage: 2000 # Lua 150<2000
       behaviors:
       - !type:PlaySoundBehavior
         sound:
@@ -1253,7 +1253,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 1000
+        damage: 3500 # Lua 1000<3500
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
@@ -1277,7 +1277,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 700
+        damage: 1750 # Lua 700<1750
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
@@ -1333,7 +1333,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 500
+        damage: 2500 # Lua 500<2500
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
@@ -1437,7 +1437,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 100
+        damage: 1000 # Lua 100<1000
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]

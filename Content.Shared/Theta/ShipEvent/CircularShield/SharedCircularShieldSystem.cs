@@ -1,5 +1,6 @@
-﻿using System.Numerics;
+using System.Numerics;
 using Content.Shared.Theta.ShipEvent.Components;
+using Robust.Shared.Physics.Components;
 
 namespace Content.Shared.Theta.ShipEvent.CircularShield;
 
@@ -73,41 +74,45 @@ public class SharedCircularShieldSystem : EntitySystem
     }
 
     public bool EntityInShield(Entity<CircularShieldComponent> shield, EntityUid otherUid, SharedTransformSystem? transformSystem = null)
+    //Lua fix
     {
-        // Get the shield's parent entity (grid)
-        if (!TryComp(shield, out TransformComponent? transform))
+        if (!TryComp(shield, out TransformComponent? shieldXform))
             return false;
 
-        var gridUid = transform.ParentUid;
+        var gridUid = shieldXform.ParentUid;
 
-        // If no valid grid, fall back to the shield's position
-        if (!TerminatingOrDeleted(gridUid))
+        Vector2 center;
+        Angle referenceRot;
+
+        if (!TerminatingOrDeleted(gridUid) &&
+            TryComp(gridUid, out TransformComponent? gridXform))
         {
-            var fallbackDelta = _transformSystem.GetWorldPosition(otherUid) - _transformSystem.GetWorldPosition(shield);
-            var fallbackAngle = ThetaHelpers.AngNormal(new Angle(fallbackDelta) - _transformSystem.GetWorldRotation(shield));
-            var fallbackStart = ThetaHelpers.AngNormal(shield.Comp.Angle - shield.Comp.Width / 2);
-            return ThetaHelpers.AngInSector(fallbackAngle, fallbackStart, shield.Comp.Width) &&
-                fallbackDelta.Length() < shield.Comp.Radius + 0.1; //+0.1 to avoid being screwed over by rounding errors
+            var gridPos = _transformSystem.GetWorldPosition(gridXform);
+            referenceRot = _transformSystem.GetWorldRotation(gridXform);
+
+            var offset = Vector2.Zero;
+            if (TryComp(gridUid, out PhysicsComponent? physics))
+                offset = gridXform.WorldRotation.RotateVec(physics.LocalCenter);
+
+            center = gridPos + offset;
+        }
+        else
+        {
+            center = _transformSystem.GetWorldPosition(shield);
+            referenceRot = _transformSystem.GetWorldRotation(shield);
         }
 
-        // Use grid position and rotation for calculations
-        if (!TryComp(gridUid, out TransformComponent? gridTransform))
-            return false;
-
-        var gridPos = _transformSystem.GetWorldPosition(gridTransform);
-        var gridRot = _transformSystem.GetWorldRotation(gridTransform);
-
         var otherPos = _transformSystem.GetWorldPosition(otherUid);
+        var delta = otherPos - center;
 
-        var delta = otherPos - gridPos;
-        var relativeAngle = ThetaHelpers.AngNormal(new Angle(delta) - gridRot);
-
-        // Calculate shield start angle, accounting for center offset if needed
+        var relativeAngle = ThetaHelpers.AngNormal(new Angle(delta) - referenceRot);
         var shieldStart = ThetaHelpers.AngNormal(shield.Comp.Angle - shield.Comp.Width / 2);
 
         return ThetaHelpers.AngInSector(relativeAngle, shieldStart, shield.Comp.Width) &&
-               delta.Length() < shield.Comp.Radius + 0.1;
+               delta.Length() < shield.Comp.Radius + 0.1f;
     }
+    //Lua fix
+
     public void DoShutdownEffects(Entity<CircularShieldComponent> shield)
     {
         foreach (var effect in shield.Comp.Effects)

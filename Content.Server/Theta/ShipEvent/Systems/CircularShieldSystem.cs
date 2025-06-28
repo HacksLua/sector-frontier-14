@@ -6,7 +6,6 @@ using Content.Shared.Theta.ShipEvent.CircularShield;
 using Robust.Server.GameObjects;
 using Robust.Shared.Physics.Collision.Shapes;
 using Robust.Shared.Physics.Components;
-using Robust.Shared.Physics.Dynamics;
 using Robust.Shared.Physics.Systems;
 using Content.Server.Power.Components;
 using Content.Shared.DeviceLinking;
@@ -23,7 +22,6 @@ using Robust.Shared.Physics.Events;
 using Robust.Shared.Threading;
 using Content.Shared._Mono.SpaceArtillery;
 using Robust.Shared.Map;
-using Robust.Shared.Physics;
 
 namespace Content.Server.Theta.ShipEvent.Systems;
 
@@ -88,9 +86,8 @@ public sealed class CircularShieldSystem : SharedCircularShieldSystem
             // Find and delete any associated radar blips
             _shieldRadar.RemoveShieldRadarBlip(uid); // Mono
 
-            // Remove shield fixture to break physics references
-            if (TryComp<FixturesComponent>(uid, out var fixtures))
-                _fixSys.DestroyFixture(uid, shield.ShieldFixtureId, manager: fixtures);
+            // Remove shield fixtures to break physics references
+            DestroyAllShieldFixtures((uid, shield));
 
             // Make sure the entity transform is detached from any parent
             var xform = Transform(uid);
@@ -238,7 +235,7 @@ public sealed class CircularShieldSystem : SharedCircularShieldSystem
 
     private void UpdateConsoleState(EntityUid uid, CircularShieldConsoleComponent? console = null, RadarConsoleComponent? radar = null)
     {
-        if (!Resolve(uid, ref console, ref radar)
+        if (!Resolve(uid, ref console, ref radar, false)
             || console.BoundShield == null)
             return;
 
@@ -281,7 +278,7 @@ public sealed class CircularShieldSystem : SharedCircularShieldSystem
             // Don't allow enabling an unanchored shield
             if (!shield.Enabled)
             {
-                UpdateConsoleState( console);
+                UpdateConsoleState(console);
                 return;
             }
         }
@@ -351,6 +348,21 @@ public sealed class CircularShieldSystem : SharedCircularShieldSystem
         _pvsIgnoreSys.AddGlobalOverride(shieldUid);
 
         DoInitEffects((shieldUid, shieldComp));
+
+        //Lua fix 
+        if (TryComp<TransformComponent>(shieldUid, out var shieldXform) && shieldXform.GridUid != null)
+        {
+            var gridUid = shieldXform.GridUid.Value;
+
+            if (TryComp<PhysicsComponent>(gridUid, out var physics))
+            {
+                var centerOfMass = physics.LocalCenter;
+                var newCoords = new EntityCoordinates(gridUid, centerOfMass);
+
+                _formSys.SetCoordinates(shieldUid, newCoords);
+            }
+        }
+        //Lua fix 
     }
 
     private void OnShieldRemoved(Entity<CircularShieldComponent> shield, ref ComponentShutdown args)
@@ -374,11 +386,8 @@ public sealed class CircularShieldSystem : SharedCircularShieldSystem
         // Remove the radar blip if it exists
         _shieldRadar.RemoveShieldRadarBlip(shield);
 
-        // Remove shield fixture to prevent physics references
-        if (TryComp<FixturesComponent>(shield, out var fixtures))
-        {
-            _fixSys.DestroyFixture(shield, shield.Comp.ShieldFixtureId, manager: fixtures);
-        }
+        // Remove shield fixtures to prevent physics references
+        DestroyAllShieldFixtures(shield);
 
         // Make sure the transform is properly detached to avoid parent-child issues
         var xform = Transform(shield);
@@ -402,7 +411,7 @@ public sealed class CircularShieldSystem : SharedCircularShieldSystem
     private void OnShieldEnter(Entity<CircularShieldComponent> shield, ref StartCollideEvent args)
     {
         if (!shield.Comp.CanWork
-            || args.OurFixtureId != shield.Comp.ShieldFixtureId
+            || !IsShieldFixture(args.OurFixtureId, shield.Comp.ShieldFixtureId)
             || !EntityInShield(shield, args.OtherEntity, _formSys))
             return;
 
@@ -436,9 +445,16 @@ public sealed class CircularShieldSystem : SharedCircularShieldSystem
                                                shooterGridUid != null && shooterGridUid != shieldGridUid;
             }
 
-            // If projectile is from a different grid, the shield absorbs its energy
+            // If projectile is from a different grid, the shield absorbs its energy and destroys the projectile
             if (isProjectileFromDifferentGrid)
+            {
                 ApplyShieldPowerSurge(shield, projectile); // Apply power surge from impact based on projectile damage
+
+                // Delete the projectile when it hits the shield
+                QueueDel(args.OtherEntity);
+
+                return;
+            }
         }
 
         // Process shield effects
@@ -472,27 +488,68 @@ public sealed class CircularShieldSystem : SharedCircularShieldSystem
         if (gridUidNullable is { } gridUid && TryComp<PhysicsComponent>(gridUid, out var physics))
             centerOffset = physics.LocalCenter;
 
-        // Get or create the shield fixture
-        var shieldFix = _fixSys.GetFixtureOrNull(shield, shield.Comp.ShieldFixtureId);
-        if (shieldFix == null)
-        {
-            // Create a new circle shape at the center of mass
-            PhysShapeCircle circle = new(shield.Comp.Radius, centerOffset);
-            _fixSys.TryCreateFixture(shield, circle, shield.Comp.ShieldFixtureId, hard: false, collisionLayer: (int) CollisionGroup.BulletImpassable);
-        }
-        else
-        {
-            // Update existing fixture with new radius and center offset
-            _physSys.SetRadius(shield, shield.Comp.ShieldFixtureId, shieldFix, shieldFix.Shape, shield.Comp.Radius);
+        // Remove existing fixtures first to recreate them properly
+        DestroyAllShieldFixtures(shield);
 
-            // Update the shape's position to the center of mass
-            if (shieldFix.Shape is PhysShapeCircle circle)
-                _physSys.SetPosition(shield, shield.Comp.ShieldFixtureId, shieldFix, circle, centerOffset);
+        // Calculate the ring parameters to match the shader
+        // The shader shows a ring centered at 85% of the radius with some thickness
+        var baseRadius = shield.Comp.Radius;
+        var ringCenter = baseRadius * 0.85f; // Match shader's ring center position
+
+        // Calculate ring thickness to provide good collision detection
+        // The shader ring width is dynamic, but we need a practical collision area
+        var ringThickness = Math.Max(baseRadius * 0.2f, 3.0f); // At least 20% of radius or 3 meters
+
+        // Create a circle fixture positioned at the ring center with appropriate thickness
+        // This provides collision detection where the visual shield actually appears
+        PhysShapeCircle circle = new(ringThickness, centerOffset);
+
+        // Position the circle at the ring center distance from the shield center
+        // We need to create multiple circles around the ring perimeter for better coverage
+        var numCircles = Math.Max(8, (int)(ringCenter * 0.5f)); // More circles for larger shields
+        var angleStep = MathF.Tau / numCircles;
+
+        for (int i = 0; i < numCircles; i++)
+        {
+            var angle = i * angleStep;
+            var circleOffset = centerOffset + new Vector2(
+                MathF.Cos(angle) * ringCenter,
+                MathF.Sin(angle) * ringCenter
+            );
+
+            var ringCircle = new PhysShapeCircle(ringThickness / 2, circleOffset);
+            var fixtureId = $"{shield.Comp.ShieldFixtureId}_{i}";
+            _fixSys.TryCreateFixture(shield, ringCircle, fixtureId, hard: false, collisionLayer: (int)CollisionGroup.BulletImpassable);
         }
 
         // The radar blip is now handled by CircularShieldRadarSystem
         // We don't need to do anything with the radar blip here
         Dirty(shield);
+    }
+
+    /// <summary>
+    /// Checks if a fixture ID belongs to this shield (main fixture or ring fixtures)
+    /// </summary>
+    private bool IsShieldFixture(string fixtureId, string baseShieldFixtureId)
+    {
+        // Check if it's the main shield fixture or one of the ring fixtures
+        return fixtureId == baseShieldFixtureId || fixtureId.StartsWith($"{baseShieldFixtureId}_");
+    }
+
+    /// <summary>
+    /// Destroys all shield fixtures
+    /// </summary>
+    private void DestroyAllShieldFixtures(Entity<CircularShieldComponent> shield)
+    {
+        // Destroy the main shield fixture
+        _fixSys.DestroyFixture(shield, shield.Comp.ShieldFixtureId);
+
+        // Destroy all ring fixtures
+        for (int i = 0; i < 32; i++)
+        {
+            var fixtureId = $"{shield.Comp.ShieldFixtureId}_{i}";
+            _fixSys.DestroyFixture(shield, fixtureId);
+        }
     }
 
     /// <summary>
