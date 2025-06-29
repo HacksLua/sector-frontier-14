@@ -77,14 +77,14 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 150
+        damage: 900 #150 - Mono balance buff by salo
       behaviors:
         - !type:ChangeConstructionNodeBehavior
           node: machineFrame
         - !type:DoActsBehavior
           acts: ["Destruction"]
   - type: Gun
-    fireRate: 3
+    fireRate: 6 #3
     useKey: false
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/ship_svalinn.ogg
@@ -110,7 +110,7 @@
             - PowerCellSmall
   - type: HitscanBatteryAmmoProvider
     proto: NFRedLightLaser # Frontier: use NF prefix
-    fireCost: 50
+    fireCost: 10 #50
 
 - type: entity
   id: ShuttleGunPerforator
@@ -139,14 +139,14 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 300
+        damage: 1200 #300
       behaviors:
         - !type:ChangeConstructionNodeBehavior
           node: machineFrame
         - !type:DoActsBehavior
           acts: ["Destruction"]
   - type: Gun
-    fireRate: 1
+    fireRate: 2
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/ship_perforator.ogg
       params:
@@ -170,7 +170,7 @@
             - PowerCage
   - type: HitscanBatteryAmmoProvider
     proto: NFRedShuttleLaser # Frontier: use NF variant
-    fireCost: 150
+    fireCost: 50 #150
 
 # ---- Launchers ----
 # naming: EXP (Explosion) + conventional power + suffix (g for Grenade, c for RPG Cartridge) + Name
@@ -199,15 +199,15 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 200
+        damage: 900 #200
       behaviors:
         - !type:ChangeConstructionNodeBehavior
           node: machineFrame
         - !type:DoActsBehavior
           acts: ["Destruction"]
   - type: Gun
-    projectileSpeed: 80
-    fireRate: 1
+    projectileSpeed: 120 #80
+    fireRate: 2
     angleDecay: 45
     minAngle: 0
     maxAngle: 15
@@ -221,7 +221,7 @@
     whitelist:
       tags:
         - Grenade
-    capacity: 2
+    capacity: 8
     soundInsert:
       path: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
   - type: Machine
@@ -254,14 +254,14 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 350
+        damage: 1200 #350
       behaviors:
         - !type:ChangeConstructionNodeBehavior
           node: machineFrame
         - !type:DoActsBehavior
           acts: ["Destruction"]
   - type: Gun
-    projectileSpeed: 40
+    projectileSpeed: 200 #40
     fireRate: 0.3
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/ship_duster.ogg
@@ -313,7 +313,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 300
+        damage: 2000 #300
       behaviors:
         - !type:DoActsBehavior
           acts: ["Destruction"]
@@ -322,14 +322,14 @@
     layers:
     - state: base
   - type: Gun
-    fireRate: 1
+    fireRate: 0.5
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/mateba.ogg
   - type: BallisticAmmoProvider
     whitelist:
       tags:
         - CannonBall
-    capacity: 1
+    capacity: 2
     proto: NFCannonBall # Frontier: use NF variant
     soundInsert:
       path: /Audio/Weapons/Guns/Gunshots/grenade_launcher.ogg
@@ -365,14 +365,14 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 100
+        damage: 650 #100
       behaviors:
         - !type:ChangeConstructionNodeBehavior
           node: machineFrame
         - !type:DoActsBehavior
           acts: ["Destruction"]
   - type: Gun
-    projectileSpeed: 20
+    projectileSpeed: 35 #20
     fireRate: 2
     selectedMode: SemiAuto
     angleDecay: 45
@@ -385,18 +385,18 @@
       params:
         variation: 0.12
   - type: RechargeBasicEntityAmmo
-    rechargeCooldown: 3
+    rechargeCooldown: 2 #3
     rechargeSound:
       path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
       params:
         pitch: 1.2
         variation: 0.08
   - type: BasicEntityAmmoProvider
-    proto: NFBulletKineticShuttle
-    capacity: 10
-    count: 10
+    proto: NFBulletKineticMediumPower #NFBulletKineticShuttle<NFBulletKineticMediumPower
+    capacity: 5 #10
+    count: 5 #10
   - type: Machine
     board: ShuttleGunKineticCircuitboard
   - type: ExtensionCableReceiver # Frontier
   - type: ApcPowerReceiver # Frontier
-    powerLoad: 1500 # Frontier
+    powerLoad: 2500 #1500 # Frontier

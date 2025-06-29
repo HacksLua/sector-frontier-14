@@ -12,7 +12,8 @@
     whitelist:
       tags:
         - N14CartridgePistol5
-    capacity: 0
+    proto: N14CartridgePistol5
+    capacity: 200
   - type: ContainerContainer
     containers:
       ballistic-ammo: !type:Container
@@ -24,7 +25,12 @@
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
   - type: Appearance
+
 
 - type: entity
   id: N14MagazineMinigun5mm
@@ -32,5 +38,4 @@
   parent: N14BaseMagazine5mmMinigun
   components:
   - type: BallisticAmmoProvider
-    capacity: 200
     proto: N14CartridgePistol5

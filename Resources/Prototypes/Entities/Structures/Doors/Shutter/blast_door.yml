@@ -35,6 +35,14 @@
   - type: Damageable
     damageContainer: StructuralInorganic
     damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1500 #500 For Mono by salo
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
   - type: ContainerFill
     containers:
       board: [ DoorElectronics ]

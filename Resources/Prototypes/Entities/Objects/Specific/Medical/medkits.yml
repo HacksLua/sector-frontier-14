@@ -101,4 +101,6 @@
   - type: Item
     heldPrefix: blackkit
     size: Normal
+  - type: Clothing
+    slots: pocket
 

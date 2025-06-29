@@ -62,6 +62,8 @@
   name: ракетный двигатель
   suffix: LuaTech, Луа, Тир 5
   components:
+  - type: DisableToolUse
+    prying: true
   - type: Machine
     board: ThrusterLuaMachineCircuitboard
   - type: Sprite

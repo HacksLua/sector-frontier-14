@@ -331,7 +331,7 @@
   result: PowerCageRechargerCircuitboard
 
 - type: latheRecipe
-  parent: [ BaseCircuitboardRecipe, BaseSecurityMachineRecipeCategory ]
+  parent: [ BaseGoldCircuitboardRecipe, BaseSecurityMachineRecipeCategory ]
   id: ShuttleGunKineticCircuitboard
   result: ShuttleGunKineticCircuitboard
   completetime: 6

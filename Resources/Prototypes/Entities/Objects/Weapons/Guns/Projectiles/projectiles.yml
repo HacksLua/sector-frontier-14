@@ -836,9 +836,15 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    totalIntensity: 150 # a ~2 tile radius
-    intensitySlope: 5
-    maxIntensity: 10
+    totalIntensity: 250 #150 # a ~2 tile radius
+    intensitySlope: 5 #5
+    maxIntensity: 100 #10
+  - type: Projectile # Wasn't, couldn't penetrate any entity (MONO still fixing it)
+    damage:
+      types:
+        Blunt: 200
+        Heat: 100
+        Structural: 400
 
 - type: entity
   id: BulletGrenadeFlash

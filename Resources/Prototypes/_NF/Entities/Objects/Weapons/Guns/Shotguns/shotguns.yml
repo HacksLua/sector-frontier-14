@@ -14,6 +14,7 @@
   - type: Clothing
     sprite: Objects/Weapons/Guns/Shotguns/bulldog.rsi
   - type: Gun
+    fireRate: 3
     selectedMode: FullAuto
     availableModes:
     - FullAuto
@@ -35,6 +36,8 @@
     sprite: Objects/Weapons/Guns/Shotguns/db_shotgun_inhands_64x.rsi
   - type: BallisticAmmoProvider
     capacity: 2
+  - type: Gun
+    fireRate: 2
   - type: Construction
     graph: NFShotgunSawn
     node: start
@@ -72,6 +75,8 @@
     sprite: _NF/Objects/Weapons/Guns/Shotguns/pump_inhands_64x.rsi
   - type: BallisticAmmoProvider
     capacity: 5
+  - type: Gun
+    fireRate: 1
   - type: NFWeaponDetails
     manufacturer: weapon-details-manufacturer-nanotrasen-munitions
 
@@ -88,6 +93,8 @@
     sprite: _DV/Objects/Weapons/Guns/Shotguns/sawn.rsi
   - type: Item
     size: Small
+  - type: Gun
+    fireRate: 2
   - type: BallisticAmmoProvider
     capacity: 2
   - type: NFWeaponDetails

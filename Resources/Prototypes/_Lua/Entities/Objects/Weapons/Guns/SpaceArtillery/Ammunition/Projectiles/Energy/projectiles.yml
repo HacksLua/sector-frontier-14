@@ -11,16 +11,16 @@
   - type: Projectile
     damage:
       types:
-        Structural: 175
+        Structural: 1000 #175
         Radiation: 35
-        Heat: 40
-        Blunt: 20
+        Heat: 80 #40
+        Blunt: 40 #20
   - type: ExplodeOnTrigger
   - type: Explosive
-    explosionType: Default
-    maxIntensity: 12
-    intensitySlope: 3
-    totalIntensity: 4
+    explosionType: MicroBomb #Default
+    maxIntensity: 40 #12
+    intensitySlope: 6 #3
+    totalIntensity: 40 #4
     maxTileBreak: 2
   - type: PointLight
     radius: 3.5
@@ -35,7 +35,7 @@
     requireNoGrid: true
     shape: triangle
   - type: TimedDespawn
-    lifetime: 20
+    lifetime: 7 #20
   - type: ShipWeaponProjectile
 
 - type: hitscan
