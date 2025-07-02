@@ -106,9 +106,9 @@
     entity: AtmosDeviceFanDirectional
     edges:
     - to: start
-      conditions:
-      - !type:EntityAnchored
-        anchored: false
+      # conditions:
+      # - !type:EntityAnchored
+      #   anchored: false #Lua-Tweak - закомментированно, так как будучи не открепленным - вентилятор не разбирается, а его открепляемость нежелательна
       completed:
       - !type:SpawnPrototype
         prototype: IngotGold1
@@ -116,6 +116,33 @@
       - !type:DeleteEntity
       steps:
       - tool: Screwing
-        doAfter: 1
+        doAfter: 5 #Lua-Tweak - 1 to 5 - для небольшого замедления и усложнения процесса
       - tool: Welding
+        doAfter: 15 #Lua-Tweak - 1 to 15 - для небольшого замедления и усложнения процесса
+
+- type: constructionGraph
+  id: AtmosDeviceFanTiny 
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: AtmosDeviceFanTiny 
+      steps:
+      - material: Gold
+        amount: 30
         doAfter: 1
+
+  - node: AtmosDeviceFanTiny 
+    entity: AtmosDeviceFanTiny 
+    edges:
+    - to: start
+      completed:
+      - !type:SpawnPrototype
+        prototype: IngotGold1
+        amount: 30
+      - !type:DeleteEntity
+      steps:
+      - tool: Screwing
+        doAfter: 10 #Lua-Tweak - 1 to 10 - для небольшого замедления и усложнения процесса
+      - tool: Welding
+        doAfter: 25 #Lua-Tweak - 1 to 25 - для небольшого замедления и усложнения процесса

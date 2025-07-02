@@ -25,6 +25,9 @@
   - type: Tag
     tags:
       - SpreaderIgnore
+  - type: Construction #Lua_Tweak - крафт маленького вентилятора
+    graph: AtmosDeviceFanTiny 
+    node: AtmosDeviceFanTiny
 
 - type: entity
   id: AtmosDeviceFanDirectional

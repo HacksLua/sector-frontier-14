@@ -10,6 +10,17 @@
   placementMode: SnapgridCenter
   canBuildInImpassable: false
 
+- type: construction
+  name: atmos-device-fan-tiny
+  id: AtmosDeviceFanTiny
+  description: atmos-device-fan-tiny-desc
+  graph: AtmosDeviceFanTiny
+  startNode: start
+  targetNode: AtmosDeviceFanTiny
+  category: construction-category-utilities
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+
 # DRAIN
 - type: construction
   name: floor-drain
