@@ -1,0 +1,141 @@
+#Security patrol suit
+- type: entity
+  parent: NFClothingHeadHardsuitWithLightBaseNfsd
+  id: ClothingHeadHelmetHardsuitTSFMCM73
+  categories: [ HideSpawnMenu ]
+  name: TSFMC M73 tacsuit helmet
+  description: An armored tacsuit helmet used by the TSFMC.
+  components:
+  - type: Sprite
+    sprite: _EE/Clothing/Head/Hardsuits/tsfmc.rsi
+  - type: Clothing
+    sprite: _EE/Clothing/Head/Hardsuits/tsfmc.rsi
+  - type: PointLight
+    color: "#ffeead"
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9
+
+- type: entity
+  parent: ClothingHeadHelmetHardsuitNfsdBronze
+  id: ClothingHeadHelmetHardsuitTSFMCM74
+  categories: [ HideSpawnMenu ]
+  name: TSFMC M74 tacsuit helmet
+  components:
+  - type: Sprite
+    sprite: _EE/Clothing/Head/Hardsuits/tsfmc.rsi
+  - type: Clothing
+    sprite: _EE/Clothing/Head/Hardsuits/tsfmc.rsi
+
+- type: entity
+  parent: ClothingHeadHelmetHardsuitNfsdBronze
+  id: ClothingHeadHelmetHardsuitTSFMCM75
+  categories: [ HideSpawnMenu ]
+  name: TSFMC M75 tacsuit helmet
+  components:
+  - type: Sprite
+    sprite: _EE/Clothing/Head/Hardsuits/tsfmc.rsi
+  - type: Clothing
+    sprite: _EE/Clothing/Head/Hardsuits/tsfmc.rsi
+
+- type: entity
+  parent: ClothingHeadHelmetHardsuitNfsdBronze
+  id: ClothingHeadHelmetHardsuitTSFMCM73-C
+  name: TSFMC M73-C tacsuit helmet
+  description: An armored tacsuit helmet used by the TSFMC.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: PointLight
+    radius: 5 # Mono
+  - type: Sprite
+    sprite: _EE/Clothing/Head/Hardsuits/tsfmc.rsi
+  - type: Clothing
+    sprite: _EE/Clothing/Head/Hardsuits/tsfmc.rsi
+
+- type: entity
+  parent: ClothingHeadHelmetHardsuitNfsdBronze
+  id: ClothingHeadHelmetHardsuitTSFMCM92
+  name: TSFMC M92 tacsuit helmet
+  description: An armored tacsuit helmet used by the TSFMC.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _EE/Clothing/Head/Hardsuits/tsfmc_sheriff.rsi
+  - type: Clothing
+    sprite: _EE/Clothing/Head/Hardsuits/tsfmc_sheriff.rsi
+
+- type: entity
+  parent: NFClothingHeadHardsuitWithLightBaseNfsd
+  id: ClothingHeadHelmetHardsuitTSFMCM92-X
+  categories: [ HideSpawnMenu ]
+  name: TSFMC M92-X tacsuit helmet
+  description: Heavily armored hardsuit helmet for TSFMC raids.
+  components:
+  - type: Sprite
+    sprite: _EE/Clothing/Head/Hardsuits/tsfmc_experimental.rsi
+  - type: Clothing
+    sprite: _EE/Clothing/Head/Hardsuits/tsfmc_experimental.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.3
+    lowPressureMultiplier: 1000
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9
+
+#Security Combat Hardsuit
+- type: entity
+  parent: NFClothingHeadHardsuitWithLightBaseNfsd
+  id: ClothingHeadHelmetHardsuitTSFMCM93
+  categories: [ HideSpawnMenu ]
+  name: TSFMC M93 tacsuit helmet
+  description: Medium armored hardsuit helmet for TSFMC raids.
+  components:
+  - type: Sprite
+    sprite: _EE/Clothing/Head/Hardsuits/tsfmc_combat.rsi
+  - type: Clothing
+    sprite: _EE/Clothing/Head/Hardsuits/tsfmc_combat.rsi
+  - type: PointLight
+    color: "#79bb66"
+  - type: PressureProtection
+    highPressureMultiplier: 0.525
+    lowPressureMultiplier: 1000
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9
+
+#Security Command Hardsuit
+- type: entity
+  parent: NFClothingHeadHardsuitWithLightBaseNfsd
+  id: ClothingHeadHelmetHardsuitTSFMCM93-C
+  categories: [ HideSpawnMenu ]
+  name: TSFMC M93-C tacsuit helmet
+  description: Medium armored hardsuit helmet for TSFMC raids.
+  components:
+  - type: Sprite
+    sprite: _EE/Clothing/Head/Hardsuits/tsfmc_command.rsi
+  - type: Clothing
+    sprite: _EE/Clothing/Head/Hardsuits/tsfmc_command.rsi
+  - type: PointLight
+    color: "#ffed7f"
+  - type: PressureProtection
+    highPressureMultiplier: 0.45
+    lowPressureMultiplier: 1000
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9

@@ -1,0 +1,24 @@
+- type: entity
+  name: navy officer's sabre
+  parent: [ BaseSword, BaseCentcommContraband ]
+  id: NavyOfficerSabre
+  description: Used primarily in ceremonies by naval officers, it remains a proven weapon.
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Objects/Weapons/Melee/ccsabre.rsi
+  - type: MeleeWeapon
+    attackRate: 1.6
+    damage:
+      types:
+        Slash: 30 # Seem important to keep the message from goob.// Fuck you.
+    soundHit:
+      path: /Audio/Weapons/bladeslice.ogg
+  - type: Reflect
+    reflectProb: .2
+    spread: 90
+  - type: Item
+    sprite: _Goobstation/Objects/Weapons/Melee/ccsabre.rsi
+  - type: Tag
+    tags:
+    - CaptainSabre
+  - type: DisarmMalus

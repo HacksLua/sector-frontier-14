@@ -38,9 +38,9 @@
     sprite: Objects/Weapons/Guns/Battery/pulse_rifle.rsi
   - type: Clothing
     sprite: Objects/Weapons/Guns/Battery/pulse_rifle.rsi
-  - type: Battery # 30 shots
-    maxCharge: 3000
-    startingCharge: 3000
+  - type: Battery # 300 shots. # Frontier, why the fuck did you make a deathsquad gun designed to kill stations without needing to recharge only 30 shots?
+    maxCharge: 30000 #Lua edit: from 3000 to 30000
+    startingCharge: 30000 #Lua edit: from 3000 to 30000
 
 #region Other
 - type: entity
@@ -105,7 +105,7 @@
     fireCost: 100
   - type: BatteryWeaponFireModes
     fireModes:
-    - proto: NFBoltTempgunCold 
+    - proto: NFBoltTempgunCold
       fireCost: 100
     - proto: NFBoltTempgunHot
       fireCost: 100

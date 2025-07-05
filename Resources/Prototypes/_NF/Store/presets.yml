@@ -46,10 +46,11 @@
   - type: Store
     name: store-preset-name-pirate-uplink
     categories:
-    - UplinkPirateHardsuits
+    - UplinkPirateEquipment
     - UplinkPirateWeapons
     - UplinkPirateAmmo
     - UplinkPirateUtility
+    - UplinkPirateMedical
     - UplinkPirateExplosives
     currencyWhitelist:
     - Doubloon

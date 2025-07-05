@@ -1,0 +1,21 @@
+- type: entity
+  id: Bullet8x65mmSKR
+  name: bullet (8x65mm SKR)
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 45
+
+- type: entity
+  id: Bullet8x55mmSKR
+  name: bullet (8x55mm SKR)
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 22

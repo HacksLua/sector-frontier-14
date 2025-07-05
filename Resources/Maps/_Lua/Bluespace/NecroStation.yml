@@ -24378,7 +24378,7 @@ entities:
     - type: Transform
       pos: 56.698204,-27.318634
       parent: 2
-- proto: ClothingOuterHardsuitNfsdCombat
+- proto: ClothingOuterHardsuitTSFMCM93
   entities:
   - uid: 529
     components:

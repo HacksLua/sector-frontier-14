@@ -855,9 +855,6 @@
   id: MagazineMagnumSubMachineGun
 
 - type: Tag
-  id: MagazineDMR # mono
-
-- type: Tag
   id: MagazinePistolSubMachineGun
 
 - type: Tag

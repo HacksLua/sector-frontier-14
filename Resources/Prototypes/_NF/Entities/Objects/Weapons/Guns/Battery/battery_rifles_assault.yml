@@ -11,9 +11,9 @@
     sprite: Objects/Weapons/Guns/Battery/pulse_carbine.rsi
   - type: Clothing
     sprite: Objects/Weapons/Guns/Battery/pulse_carbine.rsi
-  - type: Battery # 40 shots
-    maxCharge: 3200
-    startingCharge: 3200
+  - type: Battery # 30 shots
+    maxCharge: 2400 #Lua edit: From 3200 to 2400
+    startingCharge: 2400 #Lua edit: From 3200 to 2400
 
 #region Laser
 # Frontier

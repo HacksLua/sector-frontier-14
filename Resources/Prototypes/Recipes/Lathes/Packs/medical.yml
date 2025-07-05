@@ -71,6 +71,8 @@
   - MedkitAdvanced
   - MedkitRadiation
   - MedkitCombat
+  - SyringeCase
+  - SyringeCaseAlt
 
 - type: latheRecipePack
   id: MedicalBoardsStatic

@@ -45,6 +45,9 @@ uplink-pirate-combat-medkit-desc = A medkit containing the supplies to heal brut
 uplink-pirate-combat-pen-name = Combat Medipen
 uplink-pirate-combat-pen-desc = A general use shot of omnizine, packaged in a autoinjector.
 
+uplink-pirate-syringe-case-name = Medipen Case
+uplink-pirate-syringe-case-desc = A pocket case filled with medipens for most combat scenarios.
+
 uplink-pirate-hyperzine-name = Hyperzine Injector
 uplink-pirate-hyperzine-desc = Combat stimulants that prevent stuns and increase your movement capabilities. Lasts 30 seconds.
 

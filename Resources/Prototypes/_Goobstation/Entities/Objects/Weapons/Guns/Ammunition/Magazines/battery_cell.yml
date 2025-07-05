@@ -1,0 +1,42 @@
+# SPDX-FileCopyrightText: 2025 Aviu00 <aviu00@protonmail.com>
+# SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entity
+  id: BaseMilitaryPowerCell
+  abstract: true
+  parent: BaseItem
+  components:
+  - type: Item
+  - type: Battery
+    pricePerJoule: 0.15
+  - type: PowerCell
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 200
+    intensitySlope: 1.5
+  - type: Sprite
+    sprite: Objects/Power/power_cells.rsi
+  - type: SolutionContainerManager
+    solutions:
+      battery:
+        maxVol: 5
+  - type: InjectableSolution
+    solution: battery
+  - type: DrawableSolution
+    solution: battery
+  - type: Appearance
+  - type: PowerCellVisuals
+  - type: Riggable
+  - type: HitscanBatteryAmmoProvider
+    proto: SmallRedLaser
+    fireCost: 50
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 80
+      Gold: 40
+      Glass: 40
+      Plasma: 40
+    chemicalComposition:
+      Zinc: 7.5

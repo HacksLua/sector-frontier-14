@@ -1,0 +1,31 @@
+- type: entity # Mono
+  parent: SpaceCash
+  id: SpaceCash50000
+  suffix: 50000
+  components:
+  - type: Icon
+    sprite: Objects/Economy/cash.rsi
+    state: cash_50000
+  - type: Stack
+    count: 50000
+
+- type: entity # Mono
+  parent: SpaceCash
+  id: SpaceCash75000
+  suffix: 75000
+  components:
+  - type: Icon
+    sprite: Objects/Economy/cash.rsi
+    state: cash_50000
+  - type: Stack
+    count: 75000
+
+- type: entity # Mono
+  parent: SpaceCash
+  id: SpaceCash7500
+  components:
+  - type: Icon
+    sprite: Objects/Economy/cash.rsi
+    state: cash_5000
+  - type: Stack
+    count: 7500

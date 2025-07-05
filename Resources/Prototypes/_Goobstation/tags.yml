@@ -1,5 +1,3 @@
-- type: Tag
-  id: MagazineLightRifleSubsonic
 
 - type: Tag
   id: MagazineHighCaliber
@@ -9,6 +7,15 @@
 
 - type: Tag
   id: CartridgeHighCaliber
+
+- type: Tag
+  id: MagazineLightRifleSubsonic
+
+- type: Tag
+  id: MagazineHighCaliberExplosive
+
+- type: Tag
+  id: CartridgeHighCaliberExplosive
 
 # Mechs
 
@@ -114,3 +121,54 @@
 
 - type: Tag
   id: Gygax
+
+- type: Tag
+  id: LaserLMG
+
+- type: Tag
+  id: LaserLMGBackpack
+
+- type: Tag
+  id: MilitaryPowerCell
+
+- type: Tag
+  id: MilitaryPowerCellLMG
+
+- type: Tag
+  id: MilitaryPowerCellRevolver
+
+- type: Tag
+  id: MilitaryPowerCellSniper
+
+- type: Tag
+  id: MilitaryPowerCellSMG
+
+- type: Tag
+  id: ModsuitPart
+
+- type: Tag
+  id: ModsuitShell
+
+- type: Tag
+  id: ModsuitGauntlets
+
+- type: Tag
+  id: ModsuitHelmet
+
+- type: Tag
+  id: ModsuitBoots
+
+- type: Tag
+  id: ModsuitChestplate
+
+- type: Tag
+  id: ModsuitCore
+
+- type: Tag
+  id: ModsuitPlatingExternal
+
+- type: Tag
+  id: StasisBattery
+
+- type: Tag
+  id: StasisCage

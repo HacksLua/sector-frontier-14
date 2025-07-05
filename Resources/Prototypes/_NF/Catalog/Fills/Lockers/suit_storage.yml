@@ -81,7 +81,7 @@
 - type: entity
   parent: [ LockerSalvageSpecialistFilled, StorageFillEVASuitSalvage ]
   id: SuitStorageEVASalvageFilled
-  suffix: EVA, Salvage Specialist, Filled  
+  suffix: EVA, Salvage Specialist, Filled
   components:
   - type: AccessReader
 
@@ -313,7 +313,7 @@
   - type: StorageFill
     contents:
         - id: NFTankO2N2EqualFilled
-        - id: ClothingOuterHardsuitNfsdBronze
+        - id: ClothingOuterHardsuitTSFMCM73
         - id: ClothingMaskGasNfsd
         - id: JetpackNfsdFilled
         - id: ClothingShoesBootsMagNfsd
@@ -329,7 +329,7 @@
   - type: StorageFill
     contents:
         - id: NFTankO2N2EqualFilled
-        - id: ClothingOuterHardsuitNfsdSilver
+        - id: ClothingOuterHardsuitTSFMCM74
         - id: ClothingMaskGasNfsd
         - id: JetpackNfsdFilled
         - id: ClothingShoesBootsMagNfsd
@@ -345,7 +345,7 @@
   - type: StorageFill
     contents:
         - id: NFTankO2N2EqualFilled
-        - id: ClothingOuterHardsuitNfsdBrigmedic
+        - id: ClothingOuterHardsuitTSFMCM73-C
         - id: ClothingMaskGasNfsd
         - id: JetpackNfsdFilled
         - id: ClothingShoesBootsMagNfsd
@@ -361,7 +361,7 @@
   - type: StorageFill
     contents:
         - id: NFTankO2N2EqualFilled
-        - id: ClothingOuterHardsuitNfsdGold
+        - id: ClothingOuterHardsuitTSFMCM75
         - id: ClothingMaskGasNfsd
         - id: JetpackNfsdFilled
         - id: ClothingShoesBootsMagNfsd
@@ -377,7 +377,7 @@
   - type: StorageFill
     contents:
         - id: NFTankO2N2EqualFilled
-        - id: ClothingOuterHardsuitNfsdGold
+        - id: ClothingOuterHardsuitTSFMCM75
         - id: ClothingMaskGasNfsd
         - id: JetpackNfsdFilled
         - id: ClothingShoesBootsMagNfsd
@@ -393,7 +393,7 @@
   - type: StorageFill
     contents:
         - id: NFTankO2N2EqualFilled
-        - id: ClothingOuterHardsuitNfsdSheriff
+        - id: ClothingOuterHardsuitTSFMCM92
         - id: ClothingMaskGasSheriff
         - id: JetpackNfsdFilled
         - id: ClothingShoesBootsMagNfsd
@@ -409,7 +409,7 @@
   - type: StorageFill
     contents:
         - id: NFTankO2N2EqualFilled
-        - id: ClothingOuterHardsuitNfsdCombat
+        - id: ClothingOuterHardsuitTSFMCM93
         - id: ClothingMaskGasNfsd
         - id: JetpackNfsdFilled
         - id: ClothingShoesBootsMagNfsd
@@ -425,7 +425,7 @@
   - type: StorageFill
     contents:
         - id: NFTankO2N2EqualFilled
-        - id: ClothingOuterHardsuitNfsdCommand
+        - id: ClothingOuterHardsuitTSFMCM93-C
         - id: ClothingMaskGasNfsd
         - id: JetpackNfsdFilled
         - id: ClothingShoesBootsMagNfsd

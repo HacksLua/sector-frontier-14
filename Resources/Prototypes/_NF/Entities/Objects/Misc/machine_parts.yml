@@ -64,6 +64,24 @@
     - type: Stack
       stackType: SuperCapacitor
 
+#Lua edit start
+- type: entity
+  id: SuperCapacitorStockPart10
+  name: super capacitor
+  parent: CapacitorStockPart
+  description: A super capacitor used in the construction of a variety of devices.
+  suffix: Rating 3, full
+  components:
+    - type: Sprite
+      state: super_capacitor
+    - type: MachinePart
+      part: Capacitor
+      rating: 3
+    - type: Stack
+      stackType: SuperCapacitor
+      count: 10
+#Lua edit end
+
 - type: entity
   id: PicoManipulatorStockPart
   name: super manipulator

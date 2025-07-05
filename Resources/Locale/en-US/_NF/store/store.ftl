@@ -8,8 +8,9 @@ store-category-secexplosives = Explosives
 store-category-secbundles = Bundles
 # Pirate Uplink
 store-preset-name-pirate-uplink = Pirate Uplink Catalogue
-store-category-piratehardsuits = EVA Suits
+store-category-pirateequipment = Equipment
 store-category-pirateweapons = Weapons
+store-category-piratemedical = Medical
 store-category-pirateutility = Utility
 store-category-pirateammo = Ammunition
 store-category-pirateexplosives = Explosives

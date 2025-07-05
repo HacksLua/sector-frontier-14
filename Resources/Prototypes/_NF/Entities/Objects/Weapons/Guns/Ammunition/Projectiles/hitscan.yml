@@ -3,7 +3,7 @@
   id: NFRedLightLaser
   damage:
     types:
-      Heat: 8
+      Heat: 16
   muzzleFlash: &lightMuzzleFlash
     sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
     state: muzzle_laser
@@ -20,7 +20,7 @@
   id: NFRedMediumLaser
   damage:
     types:
-      Heat: 12
+      Heat: 18
   muzzleFlash:
     sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
     state: muzzle_beam_heavy
@@ -37,7 +37,7 @@
   id: NFRedHeavyLaser
   damage:
     types:
-      Heat: 14
+      Heat: 24
   muzzleFlash:
     sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
     state: muzzle_beam_heavy
@@ -89,7 +89,7 @@
   id: NFPulse
   damage:
     types:
-      Heat: 18
+      Heat: 35
   muzzleFlash:
     sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
     state: muzzle_blue
@@ -114,7 +114,7 @@
 
 # Shuttle guns
 
-# Whatstone - got a rough value based on 
+# Whatstone - got a rough value based on
 - type: hitscan
   id: NFRedShuttleLaser
   maxLength: 60
